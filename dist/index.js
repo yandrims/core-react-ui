@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),require("react");var e=require("./components/test-component/index.js"),t=require("./components/button/index.js"),n=require("./components/link/index.js");exports.TestComponent=e,exports.Button=t,exports.Link=n;
