@@ -12,8 +12,8 @@
     "build": "rollup -c",
     "test": "jest --watch",
     "test:once": "jest",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "run:local": "start-storybook -p 6006",
+    "build:storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
