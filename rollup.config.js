@@ -1,52 +1,39 @@
-import typescript from "rollup-plugin-typescript2";
-import sass from "rollup-plugin-sass";
 import commonjs from "rollup-plugin-commonjs";
-import external from "rollup-plugin-peer-deps-external";
+import babel from "rollup-plugin-babel";
 import resolve from "rollup-plugin-node-resolve";
 import multi from "rollup-plugin-multi-input";
 import { terser } from "rollup-plugin-terser";
+import { uglify } from "rollup-plugin-uglify";
 
+const extensions = [".js", ".jsx"];
 export default {
-  input: ["src/**/*.tsx", "!src/**/*.test.tsx"],
+  input: ["src/**/*.jsx", "src/**/*.js"],
   output: [
     {
       dir: "dist",
-      format: "es",
-      sourcemap: false
-    },
-    {
-      dir: "dist",
       format: "cjs",
-      sourcemap: false
-    }
+      sourcemap: false,
+    },
   ],
+  external: ["react", "react-proptypes"],
   plugins: [
-    external(),
     resolve({
-      browser: true
+      browser: true,
+      extensions,
     }),
-    typescript({
-      rollupCommonJSResolveHack: true,
-      exclude: "**/__tests__/**",
-      clean: true
-    }),
-    commonjs({
-      include: ["node_modules/**"],
-      exclude: ["**/*.stories.js", "**/*.test.tsx"],
-      namedExports: {
-        "node_modules/react/react.js": [
-          "Children",
-          "Component",
-          "PropTypes",
-          "createElement"
-        ],
-        "node_modules/react-dom/index.js": ["render"]
-      }
-    }),
-    sass({
-      insert: true
+    commonjs(),
+    babel({
+      exclude: "node_modules/**",
+      presets: ["@babel/env", "@babel/preset-react"],
+      extensions,
     }),
     multi(),
-    terser()
-  ]
+    terser({
+      compress: {
+        inline: 1,
+        drop_console: true,
+      },
+    }),
+    uglify(),
+  ],
 };

@@ -5,12 +5,12 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _elements = _interopRequireDefault(require("./elements"));
+var _Button = _interopRequireDefault(require("./Button"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 /** elements */
 var _default = {
-  Elements: _elements["default"]
+  Button: _Button["default"]
 };
 exports["default"] = _default;
