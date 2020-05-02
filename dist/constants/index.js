@@ -3,21 +3,21 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "Button", {
+Object.defineProperty(exports, "STATUS_TYPES", {
   enumerable: true,
   get: function get() {
-    return _Button["default"];
+    return _statusTypes["default"];
   }
 });
-Object.defineProperty(exports, "Link", {
+Object.defineProperty(exports, "COLORS", {
   enumerable: true,
   get: function get() {
-    return _Link["default"];
+    return _colors.COLORS;
   }
 });
 
-var _Button = _interopRequireDefault(require("./Button"));
+var _statusTypes = _interopRequireDefault(require("./statusTypes"));
 
-var _Link = _interopRequireDefault(require("./Link"));
+var _colors = require("./colors");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

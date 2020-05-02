@@ -23,8 +23,11 @@
 	],
 	"scripts": {
 		"run:local": "PORT=3001 styleguidist server",
-		"build": "yarn docs && rimraf dist && eslint src && jest --detectOpenHandles && cross-var node -r dotenv/config $npm_package_config_build",
-		"build:rollup": "yarn docs && rimraf dist && eslint src && jest --detectOpenHandles && rollup -c",
+		"test": "eslint src && jest --detectOpenHandles",
+		"build": "yarn docs && rimraf dist && yarn test && cross-var node -r dotenv/config $npm_package_config_build",
+		"build-only": "cross-var node -r dotenv/config $npm_package_config_build",
+		"build:rollup": "yarn docs && rimraf dist && yarn test && rollup -c",
+		"build-only:rollup": "rollup -c",
 		"docs": "rimraf docs && styleguidist build"
 	},
 	"engines": {
@@ -45,6 +48,7 @@
 		"child_process": "^1.0.2",
 		"cpx": "^1.5.0",
 		"cross-var": "^1.1.0",
+		"deepmerge": "^4.2.2",
 		"dotenv-webpack": "^1.7.0",
 		"enzyme": "^3.11.0",
 		"enzyme-adapter-react-16": "^1.15.2",
@@ -67,6 +71,7 @@
 		"rollup-plugin-multi-input": "^1.1.1",
 		"rollup-plugin-node-resolve": "^5.2.0",
 		"rollup-plugin-terser": "^5.3.0",
+		"rollup-plugin-uglify": "^6.0.4",
 		"styled-components": "^5.1.0"
 	},
 	"dependencies": {
@@ -75,6 +80,7 @@
 		"react-docgen-displayname-handler": "^3.0.1",
 		"react-docgen-external-proptypes-handler": "^2.0.0",
 		"react-dom": "^16.13.1",
+		"recompose": "^0.30.0",
 		"webpack": "^4.43.0"
 	}
 }

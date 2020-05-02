@@ -10,11 +10,9 @@ import {
 	withGlobalProps,
 } from '../../helpers/hoc';
 
-function Button({ children, borderRadius, bgcolor, color, padding, fontSize }) {
+function Link({ children, borderRadius, bgcolor, color, padding, fontSize }) {
 	return (
-		<button
-			type="button"
-			className="custombutton"
+		<a
 			style={{
 				cursor: 'pointer',
 				borderRadius,
@@ -26,22 +24,22 @@ function Button({ children, borderRadius, bgcolor, color, padding, fontSize }) {
 			}}
 		>
 			{children}
-		</button>
+		</a>
 	);
 }
 
-Button.propTypes = {
-	/** Make the Button act as other elements. */
+Link.propTypes = {
+	/** Make the Link act as other elements. */
 	as: PropTypes.oneOfType([
 		PropTypes.string,
 		PropTypes.func,
 		PropTypes.elementType,
 	]),
-	/** Disable the button for being clicked. */
+	/** Disable the Link for being clicked. */
 	type: PropTypes.bool,
 };
 
-Button.defaultProps = {
+Link.defaultProps = {
 	bgcolor: '#05224e',
 	color: '#fff',
 	padding: '20px',
@@ -53,4 +51,4 @@ export default compose(
 	withForwardRef,
 	withThemeConsumer,
 	withGlobalProps,
-)(Button);
+)(Link);

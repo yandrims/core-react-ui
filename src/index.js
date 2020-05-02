@@ -1,4 +1,4 @@
 /** elements */
-import Elements from './elements';
+import { Button, Link } from './elements';
 
-export default { Elements };
+export { Button, Link };

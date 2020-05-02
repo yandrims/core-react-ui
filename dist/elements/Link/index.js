@@ -18,16 +18,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 /** npm packages */
 
 /** helpers */
-function Button(_ref) {
+function Link(_ref) {
   var children = _ref.children,
       borderRadius = _ref.borderRadius,
       bgcolor = _ref.bgcolor,
       color = _ref.color,
       padding = _ref.padding,
       fontSize = _ref.fontSize;
-  return /*#__PURE__*/_react["default"].createElement("button", {
-    type: "button",
-    className: "custombutton",
+  return /*#__PURE__*/_react["default"].createElement("a", {
     style: {
       cursor: 'pointer',
       borderRadius: borderRadius,
@@ -40,14 +38,14 @@ function Button(_ref) {
   }, children);
 }
 
-Button.propTypes = {
-  /** Make the Button act as other elements. */
+Link.propTypes = {
+  /** Make the Link act as other elements. */
   as: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].func, _propTypes["default"].elementType]),
 
-  /** Disable the button for being clicked. */
+  /** Disable the Link for being clicked. */
   type: _propTypes["default"].bool
 };
-Button.defaultProps = {
+Link.defaultProps = {
   bgcolor: '#05224e',
   color: '#fff',
   padding: '20px',
@@ -55,6 +53,6 @@ Button.defaultProps = {
   borderRadius: '5px'
 };
 
-var _default = (0, _recompose.compose)(_hoc.withForwardRef, _hoc.withThemeConsumer, _hoc.withGlobalProps)(Button);
+var _default = (0, _recompose.compose)(_hoc.withForwardRef, _hoc.withThemeConsumer, _hoc.withGlobalProps)(Link);
 
 exports["default"] = _default;
