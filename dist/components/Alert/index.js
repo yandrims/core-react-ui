@@ -18,34 +18,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 /** npm packages */
 
 /** helpers */
-function Link(_ref) {
-  var children = _ref.children,
-      borderRadius = _ref.borderRadius,
-      bgcolor = _ref.bgcolor,
-      color = _ref.color,
-      padding = _ref.padding,
-      fontSize = _ref.fontSize;
-  return /*#__PURE__*/_react["default"].createElement("a", {
-    style: {
-      cursor: 'pointer',
-      borderRadius: borderRadius,
-      boxShadow: '1px 3px 2px rgba(0,0,0,0.5)',
-      backgroundColor: bgcolor,
-      color: color,
-      padding: padding,
-      fontSize: fontSize
-    }
-  }, children);
+function Alert(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/_react["default"].createElement("div", null, children);
 }
 
-Link.propTypes = {
+Alert.propTypes = {
   /** Make the Link act as other elements. */
   as: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].func, _propTypes["default"].elementType]),
 
   /** Disable the Link for being clicked. */
   type: _propTypes["default"].bool
 };
-Link.defaultProps = {
+Alert.defaultProps = {
   bgcolor: '#05224e',
   color: '#fff',
   padding: '20px',
@@ -53,6 +38,6 @@ Link.defaultProps = {
   borderRadius: '5px'
 };
 
-var _default = (0, _recompose.compose)(_hoc.withForwardRef, _hoc.withThemeConsumer, _hoc.withGlobalProps)(Link);
+var _default = (0, _recompose.compose)(_hoc.withForwardRef, _hoc.withThemeConsumer, _hoc.withGlobalProps)(Alert);
 
 exports["default"] = _default;

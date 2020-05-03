@@ -15,7 +15,7 @@ export default {
 			sourcemap: false,
 		},
 	],
-	external: ['react', 'react-proptypes'],
+	external: ['react', 'react-proptypes', 'styled-components'],
 	plugins: [
 		resolve({
 			browser: true,

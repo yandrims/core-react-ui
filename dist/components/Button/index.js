@@ -27,7 +27,6 @@ function Button(_ref) {
       fontSize = _ref.fontSize;
   return /*#__PURE__*/_react["default"].createElement("button", {
     type: "button",
-    className: "custombutton",
     style: {
       cursor: 'pointer',
       borderRadius: borderRadius,
@@ -41,10 +40,10 @@ function Button(_ref) {
 }
 
 Button.propTypes = {
-  /** Make the Button act as other elements. */
+  /** Make the Link act as other elements. */
   as: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].func, _propTypes["default"].elementType]),
 
-  /** Disable the button for being clicked. */
+  /** Disable the Link for being clicked. */
   type: _propTypes["default"].bool
 };
 Button.defaultProps = {

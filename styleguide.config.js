@@ -1,5 +1,16 @@
 /* eslint-disable global-require */
 /* eslint-disable radix */
+
+const THEME = require('./config/style');
+
+const {
+	COLOR_PRIMARY,
+	COLOR_DARK,
+	COLOR_LIGHT,
+	FONT_FAMILY,
+	FONT_SIZE,
+} = THEME;
+
 // const path = require('path');
 const srcPath = 'src';
 const notesPath = `${srcPath}/notes`;
@@ -23,14 +34,61 @@ module.exports = {
 		favicon: 'favicon.ico',
 	},
 	theme: {
-		fontFamily: {
-			base: '"Open Sans", sans-serif',
+		color: {
+			base: COLOR_DARK,
+			light: '#767676',
+			lightest: '#ccc',
+			link: COLOR_DARK,
+			linkHover: COLOR_PRIMARY,
+			focus: 'rgba(22, 115, 177, 0.25)',
+			border: '#a0f9f9',
+			name: '#690',
+			type: '#905',
+			error: '#c00',
+			baseBackground: '#fff',
+			codeBackground: '#e8f7f7',
+			sidebarBackground: COLOR_LIGHT,
+			ribbonBackground: '#e90',
+			ribbonText: '#fff',
+			// Based on default Prism theme
+			codeBase: COLOR_DARK,
+			codeComment: '#6d6d6d',
+			codePunctuation: '#999',
+			codeProperty: '#905',
+			codeDeleted: '#905',
+			codeString: '#690',
+			codeInserted: '#690',
+			codeOperator: '#9a6e3a',
+			codeKeyword: '#1673b1',
+			codeFunction: '#DD4A68',
+			codeVariable: '#e90',
 		},
+		fontFamily: {
+			base: FONT_FAMILY,
+		},
+		fontSize: {
+			base: FONT_SIZE,
+			text: FONT_SIZE,
+			small: FONT_SIZE * 0.8,
+			h1: FONT_SIZE * 2,
+			h2: FONT_SIZE * 1.5,
+			h3: FONT_SIZE * 1.25,
+			h4: FONT_SIZE * 1,
+			h5: FONT_SIZE * 0.9,
+			h6: FONT_SIZE * 0.85,
+		},
+		sidebarWidth: 250,
+		borderRadius: 6,
 	},
 	styles: {
 		Playground: {
 			preview: {
-				fontFamily: '"Open Sans", sans-serif',
+				fontFamily: FONT_FAMILY,
+			},
+		},
+		Logo: {
+			logo: {
+				color: COLOR_PRIMARY,
 			},
 		},
 	},

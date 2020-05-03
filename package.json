@@ -33,6 +33,15 @@
 	"engines": {
 		"node": "^12.16.1"
 	},
+	"dependencies": {
+		"react": "^16.13.1",
+		"react-docgen": "^5.3.0",
+		"react-docgen-displayname-handler": "^3.0.1",
+		"react-docgen-external-proptypes-handler": "^2.0.0",
+		"react-dom": "^16.13.1",
+		"recompose": "^0.30.0",
+		"webpack": "^4.43.0"
+	},
 	"devDependencies": {
 		"@babel/cli": "^7.8.4",
 		"@babel/core": "^7.9.6",
@@ -72,15 +81,6 @@
 		"rollup-plugin-node-resolve": "^5.2.0",
 		"rollup-plugin-terser": "^5.3.0",
 		"rollup-plugin-uglify": "^6.0.4",
-		"styled-components": "^5.1.0"
-	},
-	"dependencies": {
-		"react": "^16.13.1",
-		"react-docgen": "^5.3.0",
-		"react-docgen-displayname-handler": "^3.0.1",
-		"react-docgen-external-proptypes-handler": "^2.0.0",
-		"react-dom": "^16.13.1",
-		"recompose": "^0.30.0",
-		"webpack": "^4.43.0"
+		"styled-components": "^4.4.1"
 	}
 }

@@ -10,9 +10,10 @@ import {
 	withGlobalProps,
 } from '../../helpers/hoc';
 
-function Link({ children, borderRadius, bgcolor, color, padding, fontSize }) {
+function Button({ children, borderRadius, bgcolor, color, padding, fontSize }) {
 	return (
-		<a
+		<button
+			type="button"
 			style={{
 				cursor: 'pointer',
 				borderRadius,
@@ -24,11 +25,11 @@ function Link({ children, borderRadius, bgcolor, color, padding, fontSize }) {
 			}}
 		>
 			{children}
-		</a>
+		</button>
 	);
 }
 
-Link.propTypes = {
+Button.propTypes = {
 	/** Make the Link act as other elements. */
 	as: PropTypes.oneOfType([
 		PropTypes.string,
@@ -39,7 +40,7 @@ Link.propTypes = {
 	type: PropTypes.bool,
 };
 
-Link.defaultProps = {
+Button.defaultProps = {
 	bgcolor: '#05224e',
 	color: '#fff',
 	padding: '20px',
@@ -51,4 +52,4 @@ export default compose(
 	withForwardRef,
 	withThemeConsumer,
 	withGlobalProps,
-)(Link);
+)(Button);
