@@ -14,9 +14,9 @@ import {
 /** style */
 import Styles from './Styles';
 
-function Container({ forwardRef, children, isFluid, ...rest }) {
+function Container({ forwardRef, children, ...rest }) {
 	return (
-		<Styles ref={forwardRef} isFluid={!!isFluid} {...rest}>
+		<Styles ref={forwardRef} {...rest}>
 			{children}
 		</Styles>
 	);
@@ -27,7 +27,9 @@ Container.propTypes = {
 	isFluid: PropTypes.bool,
 };
 
-Container.defaultProps = {};
+Container.defaultProps = {
+	isFluid: false,
+};
 
 export default compose(
 	withForwardRef,

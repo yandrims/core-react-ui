@@ -1,3 +1,5 @@
+/* eslint-disable no-prototype-builtins */
+/* eslint-disable no-restricted-syntax */
 /** helpers */
 import { rem } from './utils';
 
@@ -29,10 +31,11 @@ export function spacing({
 	pr,
 	theme = {},
 }) {
-	const factor = (theme.spacing && theme.spacing.multiplierFactor) || 1;
+	const factor =
+		(theme && theme.spacing && theme.spacing.multiplierFactor) || 1;
 	const styles = [];
 	const check = (elm) => typeof elm !== 'undefined';
-	const space = (elm, dir, value) => `${elm}-${dir}: ${rem(value * factor)}`;
+	const space = (elm, pos, value) => `${elm}-${pos}: ${rem(value * factor)}`;
 
 	/** margins */
 	if (check(m)) {
@@ -108,9 +111,34 @@ export function alignment({ textAlign, verticalAlign }) {
 export function display({ display: style }) {
 	const styles = [];
 
-	/** display */
 	if (style) {
 		styles.push(`display: ${style}`);
+	}
+
+	return appendStyle((styles && styles.length && styles.join(';')) || '');
+}
+
+/** responsive */
+export function responsive({ responsive: style, theme = {} }) {
+	const styles = [];
+
+	if (style) {
+		const { breakpoints } = theme;
+
+		if (breakpoints) {
+			for (const key in breakpoints) {
+				if (breakpoints.hasOwnProperty(key)) {
+					const breakpoint = style[key];
+					const value = breakpoints[key];
+					if (breakpoint) {
+						styles.push(`@media (min-width: ${value}px) {
+							${spacing(breakpoint)}
+							${display(breakpoint)}
+						}`);
+					}
+				}
+			}
+		}
 	}
 
 	return appendStyle((styles && styles.length && styles.join(';')) || '');
@@ -122,6 +150,7 @@ export function commonStyles(params) {
 		${spacing(params)}
 		${alignment(params)}
 		${display(params)}
+		${responsive(params)}
 		${customCSS(params)}
 	`;
 }

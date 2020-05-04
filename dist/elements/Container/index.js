@@ -26,12 +26,10 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 function Container(_ref) {
   var forwardRef = _ref.forwardRef,
       children = _ref.children,
-      isFluid = _ref.isFluid,
-      rest = _objectWithoutProperties(_ref, ["forwardRef", "children", "isFluid"]);
+      rest = _objectWithoutProperties(_ref, ["forwardRef", "children"]);
 
   return /*#__PURE__*/_react["default"].createElement(_Styles["default"], _extends({
-    ref: forwardRef,
-    isFluid: !!isFluid
+    ref: forwardRef
   }, rest), children);
 }
 
@@ -39,7 +37,9 @@ Container.propTypes = {
   /** Full width container, spanning the entire width of the viewport. */
   isFluid: _propTypes["default"].bool
 };
-Container.defaultProps = {};
+Container.defaultProps = {
+  isFluid: false
+};
 
 var _default = (0, _recompose.compose)(_hoc.withForwardRef, _hoc.withThemeConsumer, _hoc.withGlobalProps)(Container);
 

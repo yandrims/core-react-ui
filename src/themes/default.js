@@ -1,26 +1,30 @@
 /** base style */
 import { FONT_SIZE } from '../../config/style';
 
-/** breakpoints (in px) */
+/** breakpoints */
 const breakpoints = {
-	xxs: 320,
-	xs: 386,
-	sm: 576,
-	md: 768,
-	lg: 992,
-	xl: 1200,
-	xxl: 1500,
+	xxs: 320, // in px
+	xs: 386, // in px
+	sm: 576, // in px
+	md: 768, // in px
+	lg: 992, // in px
+	xl: 1200, // in px
+	xxl: 1500, // in px
 };
 
 /** spacing */
 const spacing = {
-	basePadding: FONT_SIZE || 15, // in px
 	multiplierFactor: 3,
 };
 
-const theme = {
-	breakpoints,
-	spacing,
+/** container */
+const container = {
+	padding: FONT_SIZE || 15, // in px
+	maxWidth: 1366, // in px
 };
 
-export default theme;
+export default {
+	breakpoints,
+	spacing,
+	container,
+};

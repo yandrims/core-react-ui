@@ -24,5 +24,5 @@ function deepMerge(originalObj, overriderObj) {
 
 
 function rem(value) {
-  return value && "".concat(value / (_style.FONT_SIZE || 16), "rem") || 0;
+  return value && "".concat((value / (_style.FONT_SIZE || 15)).toFixed(3), "rem") || 0;
 }

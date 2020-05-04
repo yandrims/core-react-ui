@@ -8,9 +8,14 @@ exports.customCSS = customCSS;
 exports.spacing = spacing;
 exports.alignment = alignment;
 exports.display = display;
+exports.responsive = responsive;
 exports.commonStyles = commonStyles;
 
 var _utils = require("./utils");
+
+/* eslint-disable no-prototype-builtins */
+
+/* eslint-disable no-restricted-syntax */
 
 /** helpers */
 
@@ -22,99 +27,102 @@ function appendStyle(style) {
 
 
 function customCSS(_ref) {
-  var style = _ref.customCSS;
-  return appendStyle(style);
+  var styles = _ref.css;
+  return appendStyle(styles);
 }
 /** spacing */
 
 
 function spacing(_ref2) {
-  var margin = _ref2.margin,
-      marginY = _ref2.marginY,
-      marginX = _ref2.marginX,
-      marginTop = _ref2.marginTop,
-      marginBottom = _ref2.marginBottom,
-      marginLeft = _ref2.marginLeft,
-      marginRight = _ref2.marginRight,
-      padding = _ref2.padding,
-      paddingY = _ref2.paddingY,
-      paddingX = _ref2.paddingX,
-      paddingTop = _ref2.paddingTop,
-      paddingBottom = _ref2.paddingBottom,
-      paddingLeft = _ref2.paddingLeft,
-      paddingRight = _ref2.paddingRight;
+  var m = _ref2.m,
+      my = _ref2.my,
+      mx = _ref2.mx,
+      mt = _ref2.mt,
+      mb = _ref2.mb,
+      ml = _ref2.ml,
+      mr = _ref2.mr,
+      p = _ref2.p,
+      py = _ref2.py,
+      px = _ref2.px,
+      pt = _ref2.pt,
+      pb = _ref2.pb,
+      pl = _ref2.pl,
+      pr = _ref2.pr,
+      _ref2$theme = _ref2.theme,
+      theme = _ref2$theme === void 0 ? {} : _ref2$theme;
+  var factor = theme && theme.spacing && theme.spacing.multiplierFactor || 1;
   var styles = [];
 
   var check = function check(elm) {
     return typeof elm !== 'undefined';
   };
 
-  var direction = function direction(elm, dir, value) {
-    return "".concat(elm, "-").concat(dir, ": ").concat((0, _utils.rem)(value));
+  var space = function space(elm, pos, value) {
+    return "".concat(elm, "-").concat(pos, ": ").concat((0, _utils.rem)(value * factor));
   };
   /** margins */
 
 
-  if (check(margin)) {
-    styles.push("margin: ".concat((0, _utils.rem)(margin)));
+  if (check(m)) {
+    styles.push("margin: ".concat((0, _utils.rem)(m * factor)));
   }
 
-  if (check(marginY)) {
-    styles.push(direction('margin', 'top', marginY));
-    styles.push(direction('margin', 'bottom', marginY));
+  if (check(my)) {
+    styles.push(space('margin', 'top', my));
+    styles.push(space('margin', 'bottom', my));
   }
 
-  if (check(marginX)) {
-    styles.push(direction('margin', 'left', marginX));
-    styles.push(direction('margin', 'right', marginX));
+  if (check(mx)) {
+    styles.push(space('margin', 'left', mx));
+    styles.push(space('margin', 'right', mx));
   }
 
-  if (check(marginTop)) {
-    styles.push(direction('margin', 'top', marginTop));
+  if (check(mt)) {
+    styles.push(space('margin', 'top', mt));
   }
 
-  if (check(marginBottom)) {
-    styles.push(direction('margin', 'bottom', marginBottom));
+  if (check(mb)) {
+    styles.push(space('margin', 'bottom', mb));
   }
 
-  if (check(marginLeft)) {
-    styles.push(direction('margin', 'left', marginLeft));
+  if (check(ml)) {
+    styles.push(space('margin', 'left', ml));
   }
 
-  if (check(marginRight)) {
-    styles.push(direction('margin', 'right', marginRight));
+  if (check(mr)) {
+    styles.push(space('margin', 'right', mr));
   }
   /** paddings */
 
 
-  if (check(padding)) {
-    styles.push("padding: ".concat((0, _utils.rem)(padding)));
+  if (check(p)) {
+    styles.push("padding: ".concat((0, _utils.rem)(p * factor)));
   }
 
-  if (check(paddingY)) {
-    styles.push(direction('padding', 'top', paddingY));
-    styles.push(direction('padding', 'bottom', paddingY));
+  if (check(py)) {
+    styles.push(space('padding', 'top', py));
+    styles.push(space('padding', 'bottom', py));
   }
 
-  if (check(paddingX)) {
-    styles.push(direction('padding', 'left', paddingX));
-    styles.push(direction('padding', 'right', paddingX));
+  if (check(px)) {
+    styles.push(space('padding', 'left', px));
+    styles.push(space('padding', 'right', px));
   }
 
-  if (check(paddingTop)) {
-    styles.push(direction('padding', 'top', paddingTop));
+  if (check(pt)) {
+    styles.push(space('padding', 'top', pt));
   }
 
-  if (check(paddingBottom)) {
-    styles.push(direction('padding', 'bottom', paddingBottom));
+  if (check(pb)) {
+    styles.push(space('padding', 'bottom', pb));
   }
 
-  if (check(paddingLeft)) {
-    styles.push(direction('padding', 'left', paddingLeft));
+  if (check(pl)) {
+    styles.push(space('padding', 'left', pl));
   }
 
-  if (check(paddingRight)) {
-    styles.push(direction('padding', 'right', paddingRight));
+  if (check(pr)) {
+    styles.push(space('padding', 'right', pr));
   }
 
   return appendStyle(styles && styles.length && styles.join(';') || '');
@@ -146,10 +154,37 @@ function alignment(_ref3) {
 function display(_ref4) {
   var style = _ref4.display;
   var styles = [];
-  /** display */
 
   if (style) {
     styles.push("display: ".concat(style));
+  }
+
+  return appendStyle(styles && styles.length && styles.join(';') || '');
+}
+/** responsive */
+
+
+function responsive(_ref5) {
+  var style = _ref5.responsive,
+      _ref5$theme = _ref5.theme,
+      theme = _ref5$theme === void 0 ? {} : _ref5$theme;
+  var styles = [];
+
+  if (style) {
+    var breakpoints = theme.breakpoints;
+
+    if (breakpoints) {
+      for (var key in breakpoints) {
+        if (breakpoints.hasOwnProperty(key)) {
+          var breakpoint = style[key];
+          var value = breakpoints[key];
+
+          if (breakpoint) {
+            styles.push("@media (min-width: ".concat(value, "px) {\n\t\t\t\t\t\t\t").concat(spacing(breakpoint), "\n\t\t\t\t\t\t\t").concat(display(breakpoint), "\n\t\t\t\t\t\t}"));
+          }
+        }
+      }
+    }
   }
 
   return appendStyle(styles && styles.length && styles.join(';') || '');
@@ -158,5 +193,5 @@ function display(_ref4) {
 
 
 function commonStyles(params) {
-  return "\n\t\t".concat(spacing(params), "\n\t\t").concat(alignment(params), "\n\t\t").concat(display(params), "\n\t\t").concat(customCSS(params), "\n\t");
+  return "\n\t\t".concat(spacing(params), "\n\t\t").concat(alignment(params), "\n\t\t").concat(display(params), "\n\t\t").concat(responsive(params), "\n\t\t").concat(customCSS(params), "\n\t");
 }
