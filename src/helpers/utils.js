@@ -11,5 +11,5 @@ export function deepMerge(originalObj, overriderObj) {
 
 /** convert to rem */
 export function rem(value) {
-	return (value && `${value / (FONT_SIZE || 16)}rem`) || 0;
+	return (value && `${value / (FONT_SIZE || 15)}rem`) || 0;
 }

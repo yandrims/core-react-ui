@@ -7,79 +7,81 @@ export function appendStyle(style) {
 }
 
 /** custom css */
-export function customCSS({ customCSS: style }) {
-	return appendStyle(style);
+export function customCSS({ css: styles }) {
+	return appendStyle(styles);
 }
 
 /** spacing */
 export function spacing({
-	margin,
-	marginY,
-	marginX,
-	marginTop,
-	marginBottom,
-	marginLeft,
-	marginRight,
-	padding,
-	paddingY,
-	paddingX,
-	paddingTop,
-	paddingBottom,
-	paddingLeft,
-	paddingRight,
+	m,
+	my,
+	mx,
+	mt,
+	mb,
+	ml,
+	mr,
+	p,
+	py,
+	px,
+	pt,
+	pb,
+	pl,
+	pr,
+	theme = {},
 }) {
+	const factor = (theme.spacing && theme.spacing.multiplierFactor) || 1;
 	const styles = [];
 	const check = (elm) => typeof elm !== 'undefined';
-	const direction = (elm, dir, value) => `${elm}-${dir}: ${rem(value)}`;
+	const space = (elm, dir, value) => `${elm}-${dir}: ${rem(value * factor)}`;
 
 	/** margins */
-	if (check(margin)) {
-		styles.push(`margin: ${rem(margin)}`);
+	if (check(m)) {
+		styles.push(`margin: ${rem(m * factor)}`);
 	}
-	if (check(marginY)) {
-		styles.push(direction('margin', 'top', marginY));
-		styles.push(direction('margin', 'bottom', marginY));
+	if (check(my)) {
+		styles.push(space('margin', 'top', my));
+		styles.push(space('margin', 'bottom', my));
 	}
-	if (check(marginX)) {
-		styles.push(direction('margin', 'left', marginX));
-		styles.push(direction('margin', 'right', marginX));
+	if (check(mx)) {
+		styles.push(space('margin', 'left', mx));
+		styles.push(space('margin', 'right', mx));
 	}
-	if (check(marginTop)) {
-		styles.push(direction('margin', 'top', marginTop));
+	if (check(mt)) {
+		styles.push(space('margin', 'top', mt));
 	}
-	if (check(marginBottom)) {
-		styles.push(direction('margin', 'bottom', marginBottom));
+	if (check(mb)) {
+		styles.push(space('margin', 'bottom', mb));
 	}
-	if (check(marginLeft)) {
-		styles.push(direction('margin', 'left', marginLeft));
+	if (check(ml)) {
+		styles.push(space('margin', 'left', ml));
 	}
-	if (check(marginRight)) {
-		styles.push(direction('margin', 'right', marginRight));
+	if (check(mr)) {
+		styles.push(space('margin', 'right', mr));
 	}
 
 	/** paddings */
-	if (check(padding)) {
-		styles.push(`padding: ${rem(padding)}`);
+	if (check(p)) {
+		styles.push(`padding: ${rem(p * factor)}`);
 	}
-	if (check(paddingY)) {
-		styles.push(direction('padding', 'top', paddingY));
-		styles.push(direction('padding', 'bottom', paddingY));
+	if (check(py)) {
+		styles.push(space('padding', 'top', py));
+		styles.push(space('padding', 'bottom', py));
 	}
-	if (check(paddingX)) {
-		styles.push(direction('padding', 'left', paddingX));
-		styles.push(direction('padding', 'right', paddingX));
+	if (check(px)) {
+		styles.push(space('padding', 'left', px));
+		styles.push(space('padding', 'right', px));
 	}
-	if (check(paddingTop)) {
-		styles.push(direction('padding', 'top', paddingTop));
+	if (check(pt)) {
+		styles.push(space('padding', 'top', pt));
 	}
-	if (check(paddingBottom)) {
-		styles.push(direction('padding', 'bottom', paddingBottom));
+	if (check(pb)) {
+		styles.push(space('padding', 'bottom', pb));
 	}
-	if (check(paddingLeft)) {
-		styles.push(direction('padding', 'left', paddingLeft));
+	if (check(pl)) {
+		styles.push(space('padding', 'left', pl));
 	}
-	if (check(paddingRight)) {
-		styles.push(direction('padding', 'right', paddingRight));
+	if (check(pr)) {
+		styles.push(space('padding', 'right', pr));
 	}
 
 	return appendStyle((styles && styles.length && styles.join(';')) || '');

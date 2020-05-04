@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { ThemeConsumer } from 'styled-components';
 
 /** helpers */
@@ -12,9 +12,7 @@ const withForwardRef = (Component) => {
 		return <Component ref={forwardedRef} {...rest} />;
 	};
 
-	return React.forwardRef((props, ref) => (
-		<Wrapper {...props} forwardRef={ref} />
-	));
+	return forwardRef((props, ref) => <Wrapper {...props} forwardRef={ref} />);
 };
 
 const withThemeConsumer = (Component) => (props) => {

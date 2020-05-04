@@ -3,7 +3,7 @@
 ```js
 import Container from '../../elements/Container';
 
-<Container padding={16} customCSS="background: #eee;">
+<Container p={16} css="background: #eee;">
 	this is container
 </Container>;
 ```
