@@ -1,6 +1,6 @@
-import commonjs from 'rollup-plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import babel from 'rollup-plugin-babel';
-import resolve from 'rollup-plugin-node-resolve';
 import multi from 'rollup-plugin-multi-input';
 import { terser } from 'rollup-plugin-terser';
 import { uglify } from 'rollup-plugin-uglify';
@@ -41,6 +41,7 @@ export default {
 					'ForwardRef',
 				],
 			},
+			exclude: ['node_modules/symbol-observable/**'],
 		}),
 		babel({
 			exclude: 'node_modules/**',
