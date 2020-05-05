@@ -13,31 +13,18 @@ export function customCSS({ css: styles }) {
 	return appendStyle(styles);
 }
 
-/** spacing */
-export function spacing({
-	m,
-	my,
-	mx,
-	mt,
-	mb,
-	ml,
-	mr,
-	p,
-	py,
-	px,
-	pt,
-	pb,
-	pl,
-	pr,
-	theme = {},
-}) {
-	const factor =
-		(theme && theme.spacing && theme.spacing.multiplierFactor) || 1;
+/** combine global style props */
+export function combineGlobalStyles({ theme = {}, ...rest }) {
 	const styles = [];
-	const check = (elm) => typeof elm !== 'undefined';
-	const space = (elm, pos, value) => `${elm}-${pos}: ${rem(value * factor)}`;
 
-	/** margins */
+	/** spacing */
+	const { spacing = {} } = theme;
+	const factor = (spacing && spacing.multiplierFactor) || 1;
+	const check = (elm) => typeof elm !== 'undefined';
+	const space = (elm, pos, val) => `${elm}-${pos}: ${rem(val * factor)}`;
+
+	/** margin */
+	const { m, my, mx, mt, mb, ml, mr } = rest;
 	if (check(m)) {
 		styles.push(`margin: ${rem(m * factor)}`);
 	}
@@ -62,7 +49,8 @@ export function spacing({
 		styles.push(space('margin', 'right', mr));
 	}
 
-	/** paddings */
+	/** padding */
+	const { p, py, px, pt, pb, pl, pr } = rest;
 	if (check(p)) {
 		styles.push(`padding: ${rem(p * factor)}`);
 	}
@@ -87,32 +75,28 @@ export function spacing({
 		styles.push(space('padding', 'right', pr));
 	}
 
-	return appendStyle((styles && styles.length && styles.join(';')) || '');
-}
-
-/** alignment */
-export function alignment({ textAlign, verticalAlign }) {
-	const styles = [];
-
 	/** textAlign */
+	const { textAlign } = rest;
 	if (textAlign) {
 		styles.push(`text-align: ${textAlign}`);
 	}
 
 	/** verticalAlign */
+	const { verticalAlign } = rest;
 	if (verticalAlign) {
 		styles.push(`vertical-align: ${verticalAlign}`);
 	}
 
-	return appendStyle((styles && styles.length && styles.join(';')) || '');
-}
+	/** display */
+	const { display } = rest;
+	if (display) {
+		styles.push(`display: ${display}`);
+	}
 
-/** display */
-export function display({ display: style }) {
-	const styles = [];
-
-	if (style) {
-		styles.push(`display: ${style}`);
+	/** position */
+	const { position } = rest;
+	if (position) {
+		styles.push(`position: ${position}`);
 	}
 
 	return appendStyle((styles && styles.length && styles.join(';')) || '');
@@ -132,8 +116,7 @@ export function responsive({ responsive: style, theme = {} }) {
 					const value = breakpoints[key];
 					if (breakpoint) {
 						styles.push(`@media (min-width: ${value}px) {
-							${spacing(breakpoint)}
-							${display(breakpoint)}
+							${combineGlobalStyles(breakpoint)}
 						}`);
 					}
 				}
@@ -147,9 +130,7 @@ export function responsive({ responsive: style, theme = {} }) {
 /** common styles */
 export function commonStyles(params) {
 	return `
-		${spacing(params)}
-		${alignment(params)}
-		${display(params)}
+		${combineGlobalStyles(params)}
 		${responsive(params)}
 		${customCSS(params)}
 	`;

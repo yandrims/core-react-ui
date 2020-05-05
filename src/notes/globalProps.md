@@ -1,29 +1,36 @@
 Global props are props that are available on every elements.
 
-> | Global props  | Type    | Description        | Example                                   |
-> | ------------- | ------- | ------------------ | ----------------------------------------- |
-> | css           | Integer | custom css         | "color: blue"                             |
-> | dataCustom    | String  | custom data        | "id: 1"                                   |
-> | m             | Integer | margin             | 10                                        |
-> | my            | Integer | margin top-bottom  | 10                                        |
-> | mx            | Integer | margin left-right  | 10                                        |
-> | mt            | Integer | margin top         | 10                                        |
-> | mb            | Integer | margin bottom      | 10                                        |
-> | ml            | Integer | margin left        | 10                                        |
-> | mr            | Integer | margin right       | 10                                        |
-> | p             | Integer | padding            | 10                                        |
-> | py            | Integer | padding top-bottom | 10                                        |
-> | px            | Integer | padding left-right | 10                                        |
-> | pt            | Integer | padding top        | 10                                        |
-> | pb            | Integer | padding bottom     | 10                                        |
-> | pl            | Integer | padding left       | 10                                        |
-> | pr            | Integer | padding right      | 10                                        |
-> | textAlign     | String  | text align         | "center"                                  |
-> | verticalAlign | String  | vertical align     | "middle"                                  |
-> | position      | String  | position           | "relative"                                |
-> | display       | String  | display            | "block"                                   |
-> | tabIndex      | Integer | tab index          | 1                                         |
-> | responsive    | Object  | responsive layout  | {{sm: { m: 10, p: 10, display: "none" }}} |
+> | Global props  | Type   | Description        | Example                                     |
+> | ------------- | ------ | ------------------ | ------------------------------------------- |
+> | tabIndex      | Number | tab index          | 1                                           |
+> | as            | String | html tag           | "span"                                      |
+> | css           | String | custom css         | "color: blue"                               |
+> | dataCustom    | String | custom data        | "id: 1"                                     |
+> | m             | Number | margin             | 10                                          |
+> | my            | Number | margin top-bottom  | 10                                          |
+> | mx            | Number | margin left-right  | 10                                          |
+> | mt            | Number | margin top         | 10                                          |
+> | mb            | Number | margin bottom      | 10                                          |
+> | ml            | Number | margin left        | 10                                          |
+> | mr            | Number | margin right       | 10                                          |
+> | p             | Number | padding            | 10                                          |
+> | py            | Number | padding top-bottom | 10                                          |
+> | px            | Number | padding left-right | 10                                          |
+> | pt            | Number | padding top        | 10                                          |
+> | pb            | Number | padding bottom     | 10                                          |
+> | pl            | Number | padding left       | 10                                          |
+> | pr            | Number | padding right      | 10                                          |
+> | textAlign     | String | text align         | "center"                                    |
+> | verticalAlign | String | vertical align     | "middle"                                    |
+> | position      | String | position           | "relative"                                  |
+> | display       | String | display            | "block"                                     |
+> | responsive    | Object | responsive layout  | {{ xxs: { (everything in global props) } }} |
+> |               |        |                    | {{ xs: { (everything in global props) } }}  |
+> |               |        |                    | {{ sm: { (everything in global props) } }}  |
+> |               |        |                    | {{ md: { (everything in global props) } }}  |
+> |               |        |                    | {{ lg: { (everything in global props) } }}  |
+> |               |        |                    | {{ xl: { (everything in global props) } }}  |
+> |               |        |                    | {{ xxl: { (everything in global props) } }} |
 
 HTML attribute props will add attributes to the element.
 

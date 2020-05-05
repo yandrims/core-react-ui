@@ -1,5 +1,6 @@
 /** elements */
 import Container from './Container';
 import Row from './Row';
+import Col from './Col';
 
-export { Container, Row };
+export { Container, Row, Col };

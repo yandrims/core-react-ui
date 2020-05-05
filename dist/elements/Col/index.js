@@ -31,7 +31,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function Container(_ref) {
+function Col(_ref) {
   var forwardRef = _ref.forwardRef,
       children = _ref.children,
       rest = _objectWithoutProperties(_ref, ["forwardRef", "children"]);
@@ -41,14 +41,30 @@ function Container(_ref) {
   }, rest), children);
 }
 
-Container.propTypes = _objectSpread(_objectSpread({}, _globalProps["default"]), {}, {
-  /** Full width container, spanning the entire width of the viewport */
-  isFluid: _propTypes["default"].bool
-});
-Container.defaultProps = {
-  isFluid: false
-};
+Col.propTypes = _objectSpread(_objectSpread({}, _globalProps["default"]), {}, {
+  /** Specifies the alignment for the selected item inside the flexible container. */
+  alignSelf: _propTypes["default"].oneOf(['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
 
-var _default = (0, _recompose.compose)(_hoc.withForwardRef, _hoc.withThemeConsumer, _hoc.withGlobalProps)(Container);
+  /** Should be a number between 1 - 12 */
+  col: _propTypes["default"].number,
+
+  /** Size the column based on the natural width of its content */
+  isAutoWidth: _propTypes["default"].bool,
+
+  /** Specifies the order of a flexible item relative to the rest of the flexible items inside the same container */
+  order: _propTypes["default"].number,
+
+  /** Specifies how much the item will grow relative to the rest of the flexible items inside the same container */
+  flexGrow: _propTypes["default"].number,
+
+  /** Specifies how the item will shrink relative to the rest of the flexible items inside the same container */
+  flexShrink: _propTypes["default"].number,
+
+  /** Specifies the initial length of a flexible item. */
+  flexBasis: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].number])
+});
+Col.defaultProps = {};
+
+var _default = (0, _recompose.compose)(_hoc.withForwardRef, _hoc.withThemeConsumer, _hoc.withGlobalProps)(Col);
 
 exports["default"] = _default;

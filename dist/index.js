@@ -15,6 +15,12 @@ Object.defineProperty(exports, "Row", {
     return _elements.Row;
   }
 });
+Object.defineProperty(exports, "Col", {
+  enumerable: true,
+  get: function get() {
+    return _elements.Col;
+  }
+});
 Object.defineProperty(exports, "Alert", {
   enumerable: true,
   get: function get() {

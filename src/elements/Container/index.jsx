@@ -1,18 +1,18 @@
-/* eslint-disable no-lone-blocks */
 /** npm packages */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 
+/** style */
+import Styles from './Styles';
+
 /** helpers */
+import globalProps from '../../helpers/globalProps';
 import {
 	withForwardRef,
 	withThemeConsumer,
 	withGlobalProps,
 } from '../../helpers/hoc';
-
-/** style */
-import Styles from './Styles';
 
 function Container({ forwardRef, children, ...rest }) {
 	return (
@@ -23,7 +23,10 @@ function Container({ forwardRef, children, ...rest }) {
 }
 
 Container.propTypes = {
-	/** Full width container, spanning the entire width of the viewport. */
+	/** Global Props */
+	...globalProps,
+
+	/** Full width container, spanning the entire width of the viewport */
 	isFluid: PropTypes.bool,
 };
 

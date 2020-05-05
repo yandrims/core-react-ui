@@ -5,19 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.appendStyle = appendStyle;
 exports.customCSS = customCSS;
-exports.spacing = spacing;
-exports.alignment = alignment;
-exports.display = display;
+exports.combineGlobalStyles = combineGlobalStyles;
 exports.responsive = responsive;
 exports.commonStyles = commonStyles;
 
 var _utils = require("./utils");
 
-/* eslint-disable no-prototype-builtins */
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
-/* eslint-disable no-restricted-syntax */
-
-/** helpers */
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 /** append style */
 function appendStyle(style) {
@@ -30,38 +26,38 @@ function customCSS(_ref) {
   var styles = _ref.css;
   return appendStyle(styles);
 }
-/** spacing */
+/** combine global style props */
 
 
-function spacing(_ref2) {
-  var m = _ref2.m,
-      my = _ref2.my,
-      mx = _ref2.mx,
-      mt = _ref2.mt,
-      mb = _ref2.mb,
-      ml = _ref2.ml,
-      mr = _ref2.mr,
-      p = _ref2.p,
-      py = _ref2.py,
-      px = _ref2.px,
-      pt = _ref2.pt,
-      pb = _ref2.pb,
-      pl = _ref2.pl,
-      pr = _ref2.pr,
-      _ref2$theme = _ref2.theme,
-      theme = _ref2$theme === void 0 ? {} : _ref2$theme;
-  var factor = theme && theme.spacing && theme.spacing.multiplierFactor || 1;
+function combineGlobalStyles(_ref2) {
+  var _ref2$theme = _ref2.theme,
+      theme = _ref2$theme === void 0 ? {} : _ref2$theme,
+      rest = _objectWithoutProperties(_ref2, ["theme"]);
+
   var styles = [];
+  /** spacing */
+
+  var _theme$spacing = theme.spacing,
+      spacing = _theme$spacing === void 0 ? {} : _theme$spacing;
+  var factor = spacing && spacing.multiplierFactor || 1;
 
   var check = function check(elm) {
     return typeof elm !== 'undefined';
   };
 
-  var space = function space(elm, pos, value) {
-    return "".concat(elm, "-").concat(pos, ": ").concat((0, _utils.rem)(value * factor));
+  var space = function space(elm, pos, val) {
+    return "".concat(elm, "-").concat(pos, ": ").concat((0, _utils.rem)(val * factor));
   };
-  /** margins */
+  /** margin */
 
+
+  var m = rest.m,
+      my = rest.my,
+      mx = rest.mx,
+      mt = rest.mt,
+      mb = rest.mb,
+      ml = rest.ml,
+      mr = rest.mr;
 
   if (check(m)) {
     styles.push("margin: ".concat((0, _utils.rem)(m * factor)));
@@ -92,8 +88,16 @@ function spacing(_ref2) {
   if (check(mr)) {
     styles.push(space('margin', 'right', mr));
   }
-  /** paddings */
+  /** padding */
 
+
+  var p = rest.p,
+      py = rest.py,
+      px = rest.px,
+      pt = rest.pt,
+      pb = rest.pb,
+      pl = rest.pl,
+      pr = rest.pr;
 
   if (check(p)) {
     styles.push("padding: ".concat((0, _utils.rem)(p * factor)));
@@ -124,17 +128,10 @@ function spacing(_ref2) {
   if (check(pr)) {
     styles.push(space('padding', 'right', pr));
   }
-
-  return appendStyle(styles && styles.length && styles.join(';') || '');
-}
-/** alignment */
-
-
-function alignment(_ref3) {
-  var textAlign = _ref3.textAlign,
-      verticalAlign = _ref3.verticalAlign;
-  var styles = [];
   /** textAlign */
+
+
+  var textAlign = rest.textAlign;
 
   if (textAlign) {
     styles.push("text-align: ".concat(textAlign));
@@ -142,21 +139,26 @@ function alignment(_ref3) {
   /** verticalAlign */
 
 
+  var verticalAlign = rest.verticalAlign;
+
   if (verticalAlign) {
     styles.push("vertical-align: ".concat(verticalAlign));
   }
-
-  return appendStyle(styles && styles.length && styles.join(';') || '');
-}
-/** display */
+  /** display */
 
 
-function display(_ref4) {
-  var style = _ref4.display;
-  var styles = [];
+  var display = rest.display;
 
-  if (style) {
-    styles.push("display: ".concat(style));
+  if (display) {
+    styles.push("display: ".concat(display));
+  }
+  /** position */
+
+
+  var position = rest.position;
+
+  if (position) {
+    styles.push("position: ".concat(position));
   }
 
   return appendStyle(styles && styles.length && styles.join(';') || '');
@@ -164,10 +166,10 @@ function display(_ref4) {
 /** responsive */
 
 
-function responsive(_ref5) {
-  var style = _ref5.responsive,
-      _ref5$theme = _ref5.theme,
-      theme = _ref5$theme === void 0 ? {} : _ref5$theme;
+function responsive(_ref3) {
+  var style = _ref3.responsive,
+      _ref3$theme = _ref3.theme,
+      theme = _ref3$theme === void 0 ? {} : _ref3$theme;
   var styles = [];
 
   if (style) {
@@ -180,7 +182,7 @@ function responsive(_ref5) {
           var value = breakpoints[key];
 
           if (breakpoint) {
-            styles.push("@media (min-width: ".concat(value, "px) {\n\t\t\t\t\t\t\t").concat(spacing(breakpoint), "\n\t\t\t\t\t\t\t").concat(display(breakpoint), "\n\t\t\t\t\t\t}"));
+            styles.push("@media (min-width: ".concat(value, "px) {\n\t\t\t\t\t\t\t").concat(combineGlobalStyles(breakpoint), "\n\t\t\t\t\t\t}"));
           }
         }
       }
@@ -193,5 +195,5 @@ function responsive(_ref5) {
 
 
 function commonStyles(params) {
-  return "\n\t\t".concat(spacing(params), "\n\t\t").concat(alignment(params), "\n\t\t").concat(display(params), "\n\t\t").concat(responsive(params), "\n\t\t").concat(customCSS(params), "\n\t");
+  return "\n\t\t".concat(combineGlobalStyles(params), "\n\t\t").concat(responsive(params), "\n\t\t").concat(customCSS(params), "\n\t");
 }
