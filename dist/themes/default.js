@@ -5,11 +5,18 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _style = require("../../config/style");
-
 /** base style */
-
+var baseStyle = {
+  fontFamily: '"Lato",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
+  fontSize: 15,
+  // in px
+  colorPrimary: '#219191',
+  colorPrimaryText: '#ffffff',
+  colorDark: '#1e3c3c',
+  colorLight: '#caf7f7'
+};
 /** breakpoints */
+
 var breakpoints = {
   xxs: 320,
   // in px
@@ -34,12 +41,13 @@ var spacing = {
 /** container */
 
 var container = {
-  padding: _style.FONT_SIZE || 15,
+  padding: baseStyle.fontSize || 15,
   // in px
   maxWidth: 1366 // in px
 
 };
 var _default = {
+  baseStyle: baseStyle,
   breakpoints: breakpoints,
   spacing: spacing,
   container: container

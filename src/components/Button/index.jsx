@@ -1,31 +1,26 @@
 /** npm packages */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { compose } from 'recompose';
+// import { compose } from 'recompose';
+import styled from 'styled-components';
 
 /** helpers */
-import {
+/* import {
 	withForwardRef,
 	withThemeConsumer,
 	withGlobalProps,
-} from '../../helpers/hoc';
+} from '../../helpers/hoc'; */
 
-function Button({ children, borderRadius, bgcolor, color, padding, fontSize }) {
+function Button({ children }) {
+	const Styles = styled.button`
+		background: green;
+		color: white;
+	`;
+
 	return (
-		<button
-			type="button"
-			style={{
-				cursor: 'pointer',
-				borderRadius,
-				boxShadow: '1px 3px 2px rgba(0,0,0,0.5)',
-				backgroundColor: bgcolor,
-				color,
-				padding,
-				fontSize,
-			}}
-		>
+		<Styles style={{ padding: 30 }} type="button">
 			{children}
-		</button>
+		</Styles>
 	);
 }
 
@@ -48,8 +43,4 @@ Button.defaultProps = {
 	borderRadius: '5px',
 };
 
-export default compose(
-	withForwardRef,
-	withThemeConsumer,
-	withGlobalProps,
-)(Button);
+export default Button;

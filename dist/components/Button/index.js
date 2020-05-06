@@ -9,33 +9,33 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _recompose = require("recompose");
-
-var _hoc = require("../../helpers/hoc");
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 /** npm packages */
+// import { compose } from 'recompose';
 
 /** helpers */
+
+/* import {
+	withForwardRef,
+	withThemeConsumer,
+	withGlobalProps,
+} from '../../helpers/hoc'; */
 function Button(_ref) {
-  var children = _ref.children,
-      borderRadius = _ref.borderRadius,
-      bgcolor = _ref.bgcolor,
-      color = _ref.color,
-      padding = _ref.padding,
-      fontSize = _ref.fontSize;
-  return /*#__PURE__*/_react["default"].createElement("button", {
-    type: "button",
+  var children = _ref.children;
+
+  var Styles = _styledComponents["default"].button.withConfig({
+    displayName: "Button__Styles",
+    componentId: "y97ibk-0"
+  })(["background:green;color:white;"]);
+
+  return /*#__PURE__*/_react["default"].createElement(Styles, {
     style: {
-      cursor: 'pointer',
-      borderRadius: borderRadius,
-      boxShadow: '1px 3px 2px rgba(0,0,0,0.5)',
-      backgroundColor: bgcolor,
-      color: color,
-      padding: padding,
-      fontSize: fontSize
-    }
+      padding: 30
+    },
+    type: "button"
   }, children);
 }
 
@@ -53,7 +53,5 @@ Button.defaultProps = {
   fontSize: '1.1rem',
   borderRadius: '5px'
 };
-
-var _default = (0, _recompose.compose)(_hoc.withForwardRef, _hoc.withThemeConsumer, _hoc.withGlobalProps)(Button);
-
+var _default = Button;
 exports["default"] = _default;

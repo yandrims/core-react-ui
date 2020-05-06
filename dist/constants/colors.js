@@ -3,13 +3,18 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.STATUS = exports.COLORS = exports.PALETTE = void 0;
+exports["default"] = void 0;
 
-var _style = require("../../config/style");
+var _default2 = _interopRequireDefault(require("../themes/default"));
 
-/** base style */
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+/** theme */
+var baseStyle = _default2["default"].baseStyle;
+var colorPrimary = baseStyle.colorPrimary,
+    colorPrimaryText = baseStyle.colorPrimaryText;
 /** palette */
+
 var PALETTE = {
   TRANSPARENT: ' transparent',
   BLACK: '#000000',
@@ -41,7 +46,6 @@ var PALETTE = {
   GOLD: '#CBBC29',
   BROWN: '#523809'
 };
-exports.PALETTE = PALETTE;
 var BLACK = PALETTE.BLACK,
     WHITE = PALETTE.WHITE,
     RED_DARK = PALETTE.RED_DARK,
@@ -51,13 +55,12 @@ var BLACK = PALETTE.BLACK,
     BLUE = PALETTE.BLUE,
     YELLOW = PALETTE.YELLOW,
     TURQUOISE = PALETTE.TURQUOISE;
-var COLORS = {
-  PRIMARY: _style.COLOR_PRIMARY || TURQUOISE,
-  PRIMARY_TEXT: _style.COLOR_PRIMARY_TEXT || WHITE,
+var COLOR = {
+  PRIMARY: colorPrimary || TURQUOISE,
+  PRIMARY_TEXT: colorPrimaryText || WHITE,
   DISABLED: GREY_DARK,
   DISABLED_TEXT: GREY_LIGHT
 };
-exports.COLORS = COLORS;
 var STATUS = {
   SUCCESS: GREEN,
   SUCCESS_TEXT: WHITE,
@@ -68,4 +71,9 @@ var STATUS = {
   DANGER: RED_DARK,
   DANGER_TEXT: WHITE
 };
-exports.STATUS = STATUS;
+var _default = {
+  PALETTE: PALETTE,
+  COLOR: COLOR,
+  STATUS: STATUS
+};
+exports["default"] = _default;

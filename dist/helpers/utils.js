@@ -8,13 +8,13 @@ exports.rem = rem;
 
 var _deepmerge = _interopRequireDefault(require("deepmerge"));
 
-var _style = require("../../config/style");
+var _default = _interopRequireDefault(require("../themes/default"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 /** npm packages */
 
-/** base style */
+/** theme */
 
 /** deep merge object */
 function deepMerge(originalObj, overriderObj) {
@@ -24,5 +24,6 @@ function deepMerge(originalObj, overriderObj) {
 
 
 function rem(value) {
-  return value && "".concat((value / (_style.FONT_SIZE || 15)).toFixed(3), "rem") || 0;
+  var baseStyle = _default["default"].baseStyle;
+  return value && "".concat((value / (baseStyle.fontSize || 15)).toFixed(3), "rem") || 0;
 }

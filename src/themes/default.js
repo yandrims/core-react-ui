@@ -1,5 +1,13 @@
 /** base style */
-import { FONT_SIZE } from '../../config/style';
+const baseStyle = {
+	fontFamily:
+		'"Lato",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
+	fontSize: 15, // in px
+	colorPrimary: '#219191',
+	colorPrimaryText: '#ffffff',
+	colorDark: '#1e3c3c',
+	colorLight: '#caf7f7',
+};
 
 /** breakpoints */
 const breakpoints = {
@@ -19,11 +27,12 @@ const spacing = {
 
 /** container */
 const container = {
-	padding: FONT_SIZE || 15, // in px
+	padding: baseStyle.fontSize || 15, // in px
 	maxWidth: 1366, // in px
 };
 
 export default {
+	baseStyle,
 	breakpoints,
 	spacing,
 	container,

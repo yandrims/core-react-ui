@@ -1,5 +1,8 @@
-/** base style */
-import { COLOR_PRIMARY, COLOR_PRIMARY_TEXT } from '../../config/style';
+/** theme */
+import defaultTheme from '../themes/default';
+
+const { baseStyle } = defaultTheme;
+const { colorPrimary, colorPrimaryText } = baseStyle;
 
 /** palette */
 const PALETTE = {
@@ -46,9 +49,9 @@ const {
 	TURQUOISE,
 } = PALETTE;
 
-const COLORS = {
-	PRIMARY: COLOR_PRIMARY || TURQUOISE,
-	PRIMARY_TEXT: COLOR_PRIMARY_TEXT || WHITE,
+const COLOR = {
+	PRIMARY: colorPrimary || TURQUOISE,
+	PRIMARY_TEXT: colorPrimaryText || WHITE,
 	DISABLED: GREY_DARK,
 	DISABLED_TEXT: GREY_LIGHT,
 };
@@ -64,4 +67,4 @@ const STATUS = {
 	DANGER_TEXT: WHITE,
 };
 
-export { PALETTE, COLORS, STATUS };
+export default { PALETTE, COLOR, STATUS };

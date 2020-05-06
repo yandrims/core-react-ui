@@ -1,8 +1,8 @@
 /** npm packages */
 import merge from 'deepmerge';
 
-/** base style */
-import { FONT_SIZE } from '../../config/style';
+/** theme */
+import defaultTheme from '../themes/default';
 
 /** deep merge object */
 export function deepMerge(originalObj, overriderObj) {
@@ -11,5 +11,8 @@ export function deepMerge(originalObj, overriderObj) {
 
 /** convert to rem */
 export function rem(value) {
-	return (value && `${(value / (FONT_SIZE || 15)).toFixed(3)}rem`) || 0;
+	const { baseStyle } = defaultTheme;
+	return (
+		(value && `${(value / (baseStyle.fontSize || 15)).toFixed(3)}rem`) || 0
+	);
 }

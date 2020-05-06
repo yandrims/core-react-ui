@@ -1,15 +1,12 @@
 /* eslint-disable global-require */
 /* eslint-disable radix */
 
-const THEME = require('./config/style');
-
-const {
-	COLOR_PRIMARY,
-	COLOR_DARK,
-	COLOR_LIGHT,
-	FONT_FAMILY,
-	FONT_SIZE,
-} = THEME;
+const FONT_FAMILY =
+	'"Lato",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+const FONT_SIZE = 15; // in px
+const COLOR_PRIMARY = '#219191';
+const COLOR_DARK = '#1e3c3c';
+const COLOR_LIGHT = '#caf7f7';
 
 // const path = require('path');
 const srcPath = 'src';
