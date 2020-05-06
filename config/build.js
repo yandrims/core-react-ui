@@ -10,27 +10,36 @@ const srcPath = 'src';
 const distPath = 'dist';
 const { modules } = require('./modules');
 
+const scss = [];
+const js = ['index.js', ...modules];
+
 if (modules && modules.length) {
-	modules.forEach((mod) => {
-		glob(`${srcPath}/${mod}/**/*.scss`, (error, files) => {
+	modules.forEach((elm) => {
+		scss.push(`${elm}/**/*.scss`);
+	});
+}
+
+if (scss && scss.length) {
+	scss.forEach((elm) => {
+		glob(`${srcPath}/${elm}`, (error, files) => {
 			files.forEach((file) => renderCSS(file));
 		});
+	});
+}
 
+if (js && js.length) {
+	js.forEach((elm) => {
 		execSync(
-			`babel ${srcPath}/${mod} --out-dir ${distPath}/${mod} ${
-				process.env.DEVELOPMENT ? '--source-maps' : ''
-			}`,
+			`babel ${srcPath}/${elm} --out-dir ${distPath}${
+				(elm !== 'index.js' && `/${elm}`) || ''
+			} ${process.env.DEVELOPMENT ? '--source-maps' : ''} --presets minify`,
 			{ stdio: 'inherit' },
 		);
 	});
 }
 
 replaceSCSSImportsInFolder(distPath);
-
 cpx.copySync(resolve(srcPath, 'assets', '**'), resolve(distPath, 'assets'));
-execSync(`babel ${srcPath}/index.js --out-dir ${distPath}`, {
-	stdio: 'inherit',
-});
 
 /* ============================== functions ================================= */
 

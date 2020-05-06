@@ -1,18 +1,1 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _colors = _interopRequireDefault(require("./colors"));
-
-var _statusTypes = _interopRequireDefault(require("./statusTypes"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-var _default = {
-  COLORS: _colors["default"],
-  STATUS_TYPES: _statusTypes["default"]
-};
-exports["default"] = _default;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=void 0;var _colors=_interopRequireDefault(require("./colors")),_statusTypes=_interopRequireDefault(require("./statusTypes"));function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}var _default={COLORS:_colors["default"],STATUS_TYPES:_statusTypes["default"]};exports["default"]=_default;
