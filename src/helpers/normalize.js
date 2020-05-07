@@ -9,15 +9,15 @@ const { PRIMARY, PRIMARY_TEXT } = COLORS.COLOR;
 
 const customScrollBar = ({ isCustomScrollBar }) => `
 	${
-		isCustomScrollBar &&
-		`
+		(isCustomScrollBar &&
+			`
 				&::-webkit-scrollbar { width: 10px;height: 8px; }
 				&::-webkit-scrollbar-track { background-color: ${GREY};border-left: 1px solid ${PRIMARY}; }
 				&::-webkit-scrollbar-thumb { background-color: ${PRIMARY};transition: .3s;cursor: pointer; }
 				&::-webkit-scrollbar-track, 
 				&::-webkit-scrollbar-thumb { border-radius: 0;box-shadow: none;border: 0;}
-		}
-	`
+		`) ||
+		''
 	}
 `;
 
@@ -151,6 +151,7 @@ const Styles = createGlobalStyle`
 	}
 
 	${customScrollBar}
+	${({ globalStyles }) => globalStyles || ''}
 `;
 
 export default Styles;

@@ -13,7 +13,7 @@ import styled from 'styled-components';
 
 function Button({ children }) {
 	const Styles = styled.button`
-		background: blue;
+		background: yellow;
 		color: white;
 	`;
 

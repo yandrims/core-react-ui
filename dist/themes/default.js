@@ -8,4 +8,4 @@ xl:1200,// in px
 xxl:1500// in px
 },spacing={multiplierFactor:3},container={padding:baseStyle.fontSize||15,// in px
 maxWidth:1366// in px
-},_default={baseStyle:baseStyle,breakpoints:breakpoints,spacing:spacing,container:container};/** breakpoints */exports["default"]=_default;
+},defautTheme={baseStyle:baseStyle,breakpoints:breakpoints,spacing:spacing,container:container},_default=defautTheme;/** breakpoints */exports["default"]=_default;

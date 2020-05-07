@@ -1,7 +1,7 @@
 /** theme */
-import defaultTheme from '../themes/default';
+import THEME from '../themes';
 
-const { baseStyle } = defaultTheme;
+const { baseStyle } = THEME;
 const { colorPrimary, colorPrimaryText } = baseStyle;
 
 /** palette */

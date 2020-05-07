@@ -1,3 +1,39 @@
-import defaultTheme from './default';
+// import defaultTheme from './default';
 
-export default { defaultTheme };
+/** base style */
+const baseStyle = {
+	fontFamily:
+		'"Lato",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
+	fontSize: 15, // in px
+	colorPrimary: '#219191',
+	colorPrimaryText: '#ffffff',
+	colorDark: '#1e3c3c',
+	colorLight: '#caf7f7',
+};
+
+/** breakpoints */
+const breakpoints = {
+	xxs: 320, // in px
+	xs: 386, // in px
+	sm: 576, // in px
+	md: 768, // in px
+	lg: 992, // in px
+	xl: 1200, // in px
+	xxl: 1500, // in px
+};
+
+/** spacing */
+const spacing = {
+	multiplierFactor: 3,
+};
+
+/** container */
+const container = {
+	padding: baseStyle.fontSize || 15, // in px
+	maxWidth: 1366, // in px
+};
+
+/** combine theme */
+const theme = { baseStyle, breakpoints, spacing, container };
+
+export default theme;

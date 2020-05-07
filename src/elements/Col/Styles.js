@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { commonStyles, appendStyle } from '../../helpers/style';
 import { rem } from '../../helpers/utils';
 
-const propsAlignSelfStyle = (alignSelf) => {
+const propsAlignSelfStyle = (elm) => {
 	const alignConfig = {
 		auto: 'auto',
 		'flex-start': 'flex-start',
@@ -17,7 +17,7 @@ const propsAlignSelfStyle = (alignSelf) => {
 		stretch: 'stretch',
 	};
 
-	return alignConfig[alignSelf] && `align-self: ${alignConfig[alignSelf]}`;
+	return (alignConfig[elm] && `align-self: ${alignConfig[elm]}`) || '';
 };
 
 const getRange = (range) => {

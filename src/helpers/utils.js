@@ -2,7 +2,7 @@
 import merge from 'deepmerge';
 
 /** theme */
-import defaultTheme from '../themes/default';
+import THEME from '../themes';
 
 /** deep merge object */
 export function deepMerge(originalObj, overriderObj) {
@@ -11,7 +11,8 @@ export function deepMerge(originalObj, overriderObj) {
 
 /** convert to rem */
 export function rem(value) {
-	const { baseStyle } = defaultTheme;
+	const { baseStyle } = THEME;
+
 	return (
 		(value && `${(value / (baseStyle.fontSize || 15)).toFixed(3)}rem`) || 0
 	);

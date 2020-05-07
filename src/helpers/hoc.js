@@ -6,7 +6,7 @@ import { ThemeConsumer } from 'styled-components';
 import { deepMerge } from './utils';
 
 /** theme */
-import defaultTheme from '../themes/default';
+import THEME from '../themes';
 
 const withForwardRef = (Component) => {
 	const Wrapper = ({ forwardedRef, ...rest }) => {
@@ -20,9 +20,7 @@ const withThemeConsumer = (Component) => (props) => {
 	return (
 		<ThemeConsumer>
 			{(theme) => {
-				const mergedTheme = theme
-					? deepMerge(defaultTheme, theme)
-					: defaultTheme;
+				const mergedTheme = theme ? deepMerge(THEME, theme) : THEME;
 				return <Component {...props} theme={mergedTheme} />;
 			}}
 		</ThemeConsumer>

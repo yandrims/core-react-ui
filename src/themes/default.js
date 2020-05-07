@@ -31,9 +31,11 @@ const container = {
 	maxWidth: 1366, // in px
 };
 
-export default {
+const defautTheme = {
 	baseStyle,
 	breakpoints,
 	spacing,
 	container,
 };
+
+export default defautTheme;
