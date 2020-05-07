@@ -6,7 +6,7 @@ import { commonStyles } from '../../helpers/style';
 import { rem } from '../../helpers/utils';
 
 const mainStyle = ({ theme, isFluid }) => `
-	${(!isFluid && `max-width:${theme.container.maxWidth}px;`) || ''}
+	${(!isFluid && `max-width:${theme.container.maxWidth || '1366'}px;`) || ''}
 	padding-right: ${rem(theme.container.padding)};
 	padding-left: ${rem(theme.container.padding)};
 	margin-right: auto;
