@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 
 /** style */
-import Styles from './Styles';
+import Styles from './styles';
 
 /** helpers */
 import globalProps from '../../helpers/globalProps';
