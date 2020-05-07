@@ -1,5 +1,3 @@
-// import defaultTheme from './default';
-
 /** base style */
 const baseStyle = {
 	fontFamily:

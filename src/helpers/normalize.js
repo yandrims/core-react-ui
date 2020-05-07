@@ -7,26 +7,44 @@ import COLORS from '../constants/colors';
 const { GREY } = COLORS.PALETTE;
 const { PRIMARY, PRIMARY_TEXT } = COLORS.COLOR;
 
-const customScrollBar = ({ isCustomScrollBar }) => `
-	${
-		(isCustomScrollBar &&
-			`
-				&::-webkit-scrollbar { width: 10px;height: 8px; }
-				&::-webkit-scrollbar-track { background-color: ${GREY};border-left: 1px solid ${PRIMARY}; }
-				&::-webkit-scrollbar-thumb { background-color: ${PRIMARY};transition: .3s;cursor: pointer; }
-				&::-webkit-scrollbar-track, 
-				&::-webkit-scrollbar-thumb { border-radius: 0;box-shadow: none;border: 0;}
-		`) ||
-		''
-	}
-`;
+const customScrollBar = ({ isCustomScrollBar, theme = {} }) => {
+	const { baseStyle = {} } = theme;
+	const { colorPrimary = PRIMARY } = baseStyle;
+
+	return `
+		${
+			(isCustomScrollBar &&
+				`
+					&::-webkit-scrollbar { width: 10px;height: 8px; }
+					&::-webkit-scrollbar-track { background-color: ${GREY};border-left: 1px solid ${colorPrimary}; }
+					&::-webkit-scrollbar-thumb { background-color: ${colorPrimary};transition: .3s;cursor: pointer; }
+					&::-webkit-scrollbar-track, 
+					&::-webkit-scrollbar-thumb { border-radius: 0;box-shadow: none;border: 0;}
+			`) ||
+			''
+		}
+	`;
+};
+
+const customSelection = ({ isCustomSelection = true, theme = {} }) => {
+	const { baseStyle = {} } = theme;
+	const { colorPrimary = PRIMARY, colorPrimaryText = PRIMARY_TEXT } = baseStyle;
+
+	return `
+		${
+			(isCustomSelection &&
+				`
+				::selection {
+					background: ${colorPrimary};
+					color: ${colorPrimaryText};
+				}
+			`) ||
+			''
+		}
+	`;
+};
 
 const Styles = createGlobalStyle`
-	::selection {
-		color: ${PRIMARY_TEXT};
-		background: ${PRIMARY};
-	}
-
 	* { 
 		outline: none; 
 	}
@@ -151,6 +169,7 @@ const Styles = createGlobalStyle`
 	}
 
 	${customScrollBar}
+	${customSelection}
 	${({ globalStyles }) => globalStyles || ''}
 `;
 

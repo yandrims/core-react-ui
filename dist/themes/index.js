@@ -1,5 +1,4 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=void 0;// import defaultTheme from './default';
-/** base style */var baseStyle={fontFamily:"\"Lato\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif",fontSize:15,// in px
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=void 0;/** base style */var baseStyle={fontFamily:"\"Lato\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif",fontSize:15,// in px
 colorPrimary:"#219191",colorPrimaryText:"#ffffff",colorDark:"#1e3c3c",colorLight:"#caf7f7"},breakpoints={xxs:320,// in px
 xs:386,// in px
 sm:576,// in px

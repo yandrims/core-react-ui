@@ -18,15 +18,18 @@ export function combineGlobalStyles({ theme = {}, ...rest }) {
 	const styles = [];
 
 	/** spacing */
-	const { spacing = {} } = theme;
-	const factor = (spacing && spacing.multiplierFactor) || 1;
+	const { baseStyle = {}, spacing = {} } = theme;
+	const { fontSize } = baseStyle;
+	const { multiplierFactor: factor = 1 } = spacing;
+
 	const check = (elm) => typeof elm !== 'undefined';
-	const space = (elm, pos, val) => `${elm}-${pos}: ${rem(val * factor)}`;
+	const space = (elm, pos, val) =>
+		`${elm}-${pos}: ${rem(val * factor, fontSize)}`;
 
 	/** margin */
 	const { m, my, mx, mt, mb, ml, mr } = rest;
 	if (check(m)) {
-		styles.push(`margin: ${rem(m * factor)}`);
+		styles.push(`margin: ${rem(m * factor, fontSize)}`);
 	}
 	if (check(my)) {
 		styles.push(space('margin', 'top', my));
@@ -52,7 +55,7 @@ export function combineGlobalStyles({ theme = {}, ...rest }) {
 	/** padding */
 	const { p, py, px, pt, pb, pl, pr } = rest;
 	if (check(p)) {
-		styles.push(`padding: ${rem(p * factor)}`);
+		styles.push(`padding: ${rem(p * factor, fontSize)}`);
 	}
 	if (check(py)) {
 		styles.push(space('padding', 'top', py));

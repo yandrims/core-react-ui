@@ -14,8 +14,10 @@ const mainStyle = ({
 	flexWrap,
 	theme,
 }) => {
-	const { spacing = {} } = theme;
-	const factor = (spacing && spacing.multiplierFactor) || 1;
+	const {
+		baseStyle: { fontSize },
+		spacing: { multiplierFactor: factor = 1 },
+	} = theme;
 	const val = space * factor;
 	return `
 		display: flex;
@@ -24,7 +26,14 @@ const mainStyle = ({
 		${(justifyContent && `justify-content: ${justifyContent};`) || ''}
 		${(flexWrap && `flex-wrap: ${flexWrap};`) || ''}
 		${(flexDirection && `flex-direction: ${flexDirection};`) || ''}
-		${(space && `margin-left: -${rem(val)};margin-right: -${rem(val)};`) || ''}
+		${
+			(space &&
+				`
+				margin-left: -${rem(val, fontSize)};
+				margin-right: -${rem(val, fontSize)};
+				`) ||
+			''
+		}
 	`;
 };
 

@@ -22,10 +22,6 @@ const withThemeConsumer = (Component) => (props) => {
 			{(theme) => {
 				const mergedTheme = theme ? deepMerge(THEME, theme) : THEME;
 
-				console.log('theme', theme);
-				console.log('THEME', THEME);
-				console.log('mergedTheme', mergedTheme);
-
 				return <Component {...props} theme={mergedTheme} />;
 			}}
 		</ThemeConsumer>

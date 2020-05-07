@@ -61,14 +61,23 @@ const mainStyle = ({
 	responsive,
 	theme,
 }) => {
-	const { spacing = {} } = theme;
-	const factor = (spacing && spacing.multiplierFactor) || 1;
+	const {
+		baseStyle: { fontSize },
+		spacing: { multiplierFactor: factor = 1 },
+	} = theme;
 	const val = space * factor;
 
 	return `
 		position: relative;
 		box-sizing: border-box;
-		${(space && `padding-left: ${rem(val)};padding-right: ${rem(val)};`) || ''}
+		${
+			(space &&
+				`
+				padding-left: ${rem(val, fontSize)};
+				padding-right: ${rem(val, fontSize)};
+				`) ||
+			''
+		}
 		flex-basis: ${flexBasis || 0};
 		flex-grow: ${flexGrow || 1};
 		${(flexShrink && `flex-shrink: ${flexShrink};`) || ''}
