@@ -6,7 +6,6 @@
 
     - `ESLint`
     - `Prettier`
-    - `Markdown Formatter`
 
   - Config
     - `Auto format` on save

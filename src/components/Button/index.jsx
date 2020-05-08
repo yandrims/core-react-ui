@@ -1,46 +1,83 @@
 /** npm packages */
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { compose } from 'recompose';
-import styled from 'styled-components';
+import { compose } from 'recompose';
+
+/** style */
+import Styles from './styles';
 
 /** helpers */
-/* import {
+import globalProps from '../../helpers/globalProps';
+
+/** constants */
+import GLOBAL_VARIANTS from '../../constants/globalVariants';
+
+import {
 	withForwardRef,
 	withThemeConsumer,
 	withGlobalProps,
-} from '../../helpers/hoc'; */
+} from '../../helpers/hoc';
 
-function Button({ children }) {
-	const Styles = styled.button`
-		background: red;
-		color: white;
-	`;
-
+function Button({ forwardRef, children, isLoading, isDisabled, ...rest }) {
 	return (
-		<Styles style={{ padding: 30 }} type="button">
-			{children}
+		<Styles ref={forwardRef} disabled={isLoading || isDisabled} {...rest}>
+			{/** TODO: create loading */}
+			{(isLoading && 'loading...') || children}
 		</Styles>
 	);
 }
+console.log(Object.values(GLOBAL_VARIANTS.SIZE));
 
 Button.propTypes = {
-	/** Make the Link act as other elements. */
-	as: PropTypes.oneOfType([
-		PropTypes.string,
-		PropTypes.func,
-		PropTypes.elementType,
-	]),
-	/** Disable the Link for being clicked. */
-	type: PropTypes.bool,
+	/** Global Props */
+	...globalProps,
+
+	/** Full width */
+	isBlock: PropTypes.bool,
+
+	/** Border Radius */
+	borderRadius: PropTypes.number,
+
+	/** Size */
+	size: PropTypes.oneOf(Object.values(GLOBAL_VARIANTS.SIZE)),
+
+	/** Variant */
+	variant: PropTypes.oneOf(Object.values(GLOBAL_VARIANTS.COLOR_THEMES)),
+
+	/** Button loading indicator */
+	isLoading: PropTypes.bool,
+
+	/** Disabled indicator. */
+	isDisabled: PropTypes.bool,
+
+	/** Reverse the color of given color variant. */
+	isOutlined: PropTypes.bool,
+
+	/** onClick action */
+	onClick: PropTypes.func,
+
+	/** onMouseOver action */
+	onMouseOver: PropTypes.func,
+
+	/** onMouseLeave action */
+	onMouseLeave: PropTypes.func,
+
+	/** Specify the type of the button. */
+	type: PropTypes.oneOf(['button', 'submit', 'reset']),
 };
 
 Button.defaultProps = {
-	bgcolor: '#05224e',
-	color: '#fff',
-	padding: '20px',
-	fontSize: '1.1rem',
-	borderRadius: '5px',
+	isBlock: false,
+	borderRadius: 0,
+	isLoading: false,
+	isDisabled: false,
+	onClick: () => {},
+	onMouseOver: () => {},
+	onMouseLeave: () => {},
 };
 
-export default Button;
+export default compose(
+	withForwardRef,
+	withThemeConsumer,
+	withGlobalProps,
+)(Button);

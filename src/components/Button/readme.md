@@ -1,17 +1,5 @@
-### Button
-
 ```js
-<Button>Click me ! </Button>
+import Button from '../../components/Button';
+
+<Button>Button</Button>;
 ```
-
-#### Button with props
-
-```js
-<Button bgcolor="purple" color="white" fontSize="30px" borderRadius="20px">
-	Click me !{' '}
-</Button>
-```
-
-
-
-

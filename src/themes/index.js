@@ -20,9 +20,11 @@ const breakpoints = {
 	xxl: 1500, // in px
 };
 
-/** spacing */
-const spacing = {
-	multiplierFactor: 3,
+/** button */
+const button = {
+	borderWidth: 1,
+	borderRadius: 4,
+	fontWeight: 600,
 };
 
 /** container */
@@ -31,7 +33,12 @@ const container = {
 	maxWidth: 1366, // in px
 };
 
+/** spacing */
+const spacing = {
+	multiplierFactor: 3,
+};
+
 /** combine theme */
-const theme = { baseStyle, breakpoints, spacing, container };
+const theme = { baseStyle, breakpoints, button, container, spacing };
 
 export default theme;

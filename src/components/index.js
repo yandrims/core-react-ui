@@ -1,5 +1,4 @@
-/** elements */
-import Alert from './Alert';
+/** components */
 import Button from './Button';
 
-export { Alert, Button };
+export { Button };

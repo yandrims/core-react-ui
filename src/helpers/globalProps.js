@@ -5,22 +5,10 @@ const globalProps = {
 	tabIndex: PropTypes.number,
 
 	/** Render element in different HTML tags. */
-	as: PropTypes.oneOf([
-		'div',
-		'span',
-		'p',
-		'small',
-		'strong',
-		'b',
-		'i',
-		'em',
-		'label',
-		'h1',
-		'h2',
-		'h3',
-		'h4',
-		'h5',
-		'h6',
+	as: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.func,
+		PropTypes.elementType,
 	]),
 
 	/** Custom CSS */
