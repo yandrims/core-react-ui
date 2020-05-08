@@ -3,9 +3,19 @@ import { createGlobalStyle } from 'styled-components';
 
 /** theme */
 import COLORS from '../constants/colors';
+import THEME from '../themes';
 
 const { GREY } = COLORS.PALETTE;
 const { PRIMARY, PRIMARY_TEXT } = COLORS.COLOR;
+
+const mainFontSize = ({ theme = {} }) => {
+	const { baseStyle = {} } = theme;
+	const {
+		fontSize = THEME && THEME.baseStyle && THEME.baseStyle.fontSize,
+	} = baseStyle;
+
+	return `${fontSize || 15}px`;
+};
 
 const customScrollBar = ({ isCustomScrollBar, theme = {} }) => {
 	const { baseStyle = {} } = theme;
@@ -66,7 +76,8 @@ const Styles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     letter-spacing: normal;
     font-style: normal;
-    font-weight: normal;
+		font-weight: normal;
+		font-size: ${mainFontSize}
 	}
 
 	a {
