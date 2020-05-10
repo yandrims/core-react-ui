@@ -1,4 +1,4 @@
-const VARIANTS = {
+export default {
 	SIZE: {
 		SMALLEST: 'xxs',
 		SMALLER: 'xs',
@@ -21,5 +21,3 @@ const VARIANTS = {
 		DARK: 'dark',
 	},
 };
-
-export default VARIANTS;

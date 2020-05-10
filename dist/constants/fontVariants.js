@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=void 0;var _default={STYLE:{NORMAL:"normal",ITALIC:"italic",OBLIQUE:"oblique"},WEIGHT:{LIGHT:"light",REGULAR:"regular",SEMI_BOLD:"semiBold",BOLD:"bold",EXTRA_BOLD:"extraBold"},TRANSFORM:{UPPERCASE:"uppercase",NORMAL:"normal",LOWERCASE:"lowercase"}};exports["default"]=_default;

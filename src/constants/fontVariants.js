@@ -1,4 +1,4 @@
-const VARIANTS = {
+export default {
 	STYLE: {
 		NORMAL: 'normal',
 		ITALIC: 'italic',
@@ -14,8 +14,6 @@ const VARIANTS = {
 	TRANSFORM: {
 		UPPERCASE: 'uppercase',
 		NORMAL: 'normal',
-		LOWERCAE: 'lowercase',
+		LOWERCASE: 'lowercase',
 	},
 };
-
-export default VARIANTS;

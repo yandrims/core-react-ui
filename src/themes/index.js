@@ -3,8 +3,11 @@ const baseStyle = {
 	fontFamily:
 		'"Lato",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
 	fontSize: 15, // in px
+	colorText: '#000000',
 	colorPrimary: '#219191',
 	colorPrimaryText: '#ffffff',
+	colorDisabled: '#AAAAAA',
+	colorDisabledText: '#EEEEEE',
 	colorDark: '#1e3c3c',
 	colorLight: '#caf7f7',
 };
@@ -20,13 +23,6 @@ const breakpoints = {
 	xxl: 1500, // in px
 };
 
-/** button */
-const button = {
-	borderWidth: 1,
-	borderRadius: 4,
-	fontWeight: 600,
-};
-
 /** container */
 const container = {
 	padding: baseStyle.fontSize || 15, // in px
@@ -38,7 +34,47 @@ const spacing = {
 	multiplierFactor: 3,
 };
 
-/** combine theme */
-const theme = { baseStyle, breakpoints, button, container, spacing };
+/** form config */
+const formConfig = {
+	borderWidth: 1, // in px
+	borderRadius: 2,
+	fontWeight: 400,
+	fontSize: {
+		default: 5,
+		xxs: 2,
+		xs: 3,
+		sm: 4,
+		md: 5,
+		lg: 6,
+		xl: 7,
+		xxl: 8,
+	},
+	px: {
+		default: 5,
+		xxs: 2,
+		xs: 3,
+		sm: 4,
+		md: 5,
+		lg: 6,
+		xl: 7,
+		xxl: 8,
+	},
+	py: {
+		default: 2.5,
+		xxs: 1,
+		xs: 1.5,
+		sm: 2,
+		md: 2.5,
+		lg: 3,
+		xl: 3.5,
+		xxl: 4,
+	},
+};
 
-export default theme;
+export default {
+	baseStyle,
+	breakpoints,
+	container,
+	spacing,
+	formConfig,
+};

@@ -2,7 +2,7 @@
 import { Container, Row, Col } from './elements';
 
 /** components */
-import { Alert, Button } from './components';
+import { Button } from './components';
 
 export {
 	// elements
@@ -10,6 +10,5 @@ export {
 	Row,
 	Col,
 	// components
-	Alert,
 	Button,
 };

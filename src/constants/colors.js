@@ -2,7 +2,12 @@
 import THEME from '../themes';
 
 const { baseStyle } = THEME;
-const { colorPrimary, colorPrimaryText } = baseStyle;
+const {
+	colorPrimary,
+	colorPrimaryText,
+	colorDisabled,
+	colorDisabledText,
+} = baseStyle;
 
 /** palette */
 const PALETTE = {
@@ -34,16 +39,16 @@ const PALETTE = {
 	TRANSPARENT: ' transparent',
 	TURQUOISE: '#12B9D2',
 	WHITE: '#FFFFFF',
-	YELLOW: '#FFFF00',
+	YELLOW: '#ffeb00',
 };
 
 const {
 	BLACK,
 	BLUE,
 	GREEN,
-	GREY_DARK,
+	GREY,
 	GREY_LIGHT,
-	RED_DARK,
+	RED,
 	TURQUOISE,
 	YELLOW,
 	WHITE,
@@ -52,8 +57,8 @@ const {
 const COLOR = {
 	PRIMARY: colorPrimary || TURQUOISE,
 	PRIMARY_TEXT: colorPrimaryText || WHITE,
-	DISABLED: GREY_DARK,
-	DISABLED_TEXT: GREY_LIGHT,
+	DISABLED: colorDisabled || GREY,
+	DISABLED_TEXT: colorDisabledText || GREY_LIGHT,
 };
 
 const STATUS = {
@@ -63,7 +68,7 @@ const STATUS = {
 	INFO_TEXT: WHITE,
 	WARNING: YELLOW,
 	WARNING_TEXT: BLACK,
-	DANGER: RED_DARK,
+	DANGER: RED,
 	DANGER_TEXT: WHITE,
 };
 

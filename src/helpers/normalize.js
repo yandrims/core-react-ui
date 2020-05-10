@@ -5,7 +5,7 @@ import { createGlobalStyle } from 'styled-components';
 import COLORS from '../constants/colors';
 import THEME from '../themes';
 
-const { GREY } = COLORS.PALETTE;
+const { BLACK, GREY } = COLORS.PALETTE;
 const { PRIMARY, PRIMARY_TEXT } = COLORS.COLOR;
 
 const mainFontSize = ({ theme = {} }) => {
@@ -15,6 +15,15 @@ const mainFontSize = ({ theme = {} }) => {
 	} = baseStyle;
 
 	return `${fontSize || 15}px`;
+};
+
+const mainFontColor = ({ theme = {} }) => {
+	const { baseStyle = {} } = theme;
+	const {
+		fontColor = THEME && THEME.baseStyle && THEME.baseStyle.colorText,
+	} = baseStyle;
+
+	return `${fontColor || BLACK}`;
 };
 
 const customScrollBar = ({ isCustomScrollBar, theme = {} }) => {
@@ -78,6 +87,7 @@ const Styles = createGlobalStyle`
     font-style: normal;
 		font-weight: normal;
 		font-size: ${mainFontSize}
+		color: ${mainFontColor}
 	}
 
 	a {

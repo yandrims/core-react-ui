@@ -20,9 +20,15 @@ import {
 
 function Button({ forwardRef, children, isLoading, isDisabled, ...rest }) {
 	return (
-		<Styles ref={forwardRef} disabled={isLoading || isDisabled} {...rest}>
-			{/** TODO: create loading */}
-			{(isLoading && 'loading...') || children}
+		<Styles
+			ref={forwardRef}
+			disabled={isLoading || isDisabled}
+			isLoading={isLoading}
+			isDisabled={isDisabled}
+			{...rest}
+		>
+			{(isLoading && <span className="btn-loading" />) || null}
+			{children}
 		</Styles>
 	);
 }
@@ -68,9 +74,9 @@ Button.propTypes = {
 
 Button.defaultProps = {
 	isBlock: false,
-	borderRadius: 0,
 	isLoading: false,
 	isDisabled: false,
+	isOutlined: false,
 	onClick: () => {},
 	onMouseOver: () => {},
 	onMouseLeave: () => {},
