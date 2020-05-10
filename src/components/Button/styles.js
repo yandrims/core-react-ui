@@ -112,39 +112,6 @@ const colors = ({ theme, variant, isLoading, isDisabled, isOutlined }) => {
 			`) ||
 			''
 		}
-		${
-			(isLoading &&
-				`
-					position: relative;
-					color: ${PALETTE.TRANSPARENT};
-					> .btn-loading {
-						border: 2px solid ${PALETTE.TRANSPARENT};
-						border-radius: 50%;
-						border-top: 2px solid ${btnTextColor};
-						border-bottom: 2px solid ${btnTextColor};
-						width: 20px;
-						height: 20px;
-						-webkit-animation: spin 2s linear infinite;
-						animation: spin 2s linear infinite;
-						position: absolute;
-						left: 50%;
-						top: 50%;
-						margin-left: -${borderWidth * 2 + 10}px;
-						margin-top: -${borderWidth * 2 + 10}px;
-					}
-					
-					@-webkit-keyframes spin {
-						0% { -webkit-transform: rotate(0deg); }
-						100% { -webkit-transform: rotate(360deg); }
-					}
-					
-					@keyframes spin {
-						0% { transform: rotate(0deg); }
-						100% { transform: rotate(360deg); }
-					}
-		`) ||
-			''
-		}
 	`;
 };
 
@@ -164,6 +131,97 @@ const sizes = ({ theme, size }) => {
 	return `
 		padding: ${calcRem(btnPaddingY)} ${calcRem(btnPaddingX)};
 		font-size: ${calcRem(btnFontSize)};
+	`;
+};
+
+const loading = ({ theme, variant, size, isLoading }) => {
+	const {
+		baseStyle,
+		baseStyle: {
+			colorText,
+			colorPrimaryText,
+			colorDisabledText,
+			multiplierFactor: factor = 1,
+		},
+		formConfig: { fontSize },
+	} = theme;
+
+	const calcRem = (val) => rem(val * factor, baseStyle.fontSize);
+
+	let btnLoaderColor = colorPrimaryText;
+	const btnLoaderSize = (fontSize[size] || fontSize.default) * 2.5;
+	const btnLoaderBorderSize = (fontSize[size] || fontSize.default) * 0.3;
+
+	if (variant) {
+		switch (variant) {
+			case SUCCESS:
+				btnLoaderColor = STATUS.SUCCESS_TEXT;
+				break;
+			case INFO:
+				btnLoaderColor = STATUS.INFO_TEXT;
+				break;
+			case WARNING:
+				btnLoaderColor = STATUS.WARNING_TEXT;
+				break;
+			case DANGER:
+				btnLoaderColor = STATUS.DANGER_TEXT;
+				break;
+			case DISABLED:
+				btnLoaderColor = colorDisabledText;
+				break;
+			case TRANSPARENT:
+				btnLoaderColor = colorText;
+				break;
+			case LIGHT:
+				btnLoaderColor = colorText;
+				break;
+			case DARK:
+				btnLoaderColor = PALETTE.WHITE;
+				break;
+			default:
+				btnLoaderColor = colorPrimaryText;
+				break;
+		}
+	}
+
+	return `
+		${
+			(isLoading &&
+				`
+					position: relative;
+					color: ${PALETTE.TRANSPARENT};
+					> .btn-loading {
+						display: block;
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						&:after {
+							content: '';
+							display: block;
+							border: ${calcRem(btnLoaderBorderSize)} solid ${PALETTE.TRANSPARENT};
+							border-radius: 50%;
+							border-top: ${calcRem(btnLoaderBorderSize)} solid ${btnLoaderColor};
+							border-right: ${calcRem(btnLoaderBorderSize)} solid ${btnLoaderColor};
+							width: ${calcRem(btnLoaderSize)};
+							height: ${calcRem(btnLoaderSize)};
+							-webkit-animation: spin 2s linear infinite;
+							animation: spin 2s linear infinite;
+						}
+					}
+					
+					@-webkit-keyframes spin {
+						0% { -webkit-transform: rotate(0deg); }
+						100% { -webkit-transform: rotate(360deg); }
+					}
+					
+					@keyframes spin {
+						0% { transform: rotate(0deg); }
+						100% { transform: rotate(360deg); }
+					}
+		`) ||
+			''
+		}
 	`;
 };
 
@@ -210,6 +268,7 @@ const mainStyle = ({
 		text-align: center;
 		${colors({ theme, variant, isLoading, isDisabled, isOutlined })}
 		${sizes({ theme, size })}
+		${loading({ theme, variant, size, isLoading, isOutlined })}
 	`;
 };
 
