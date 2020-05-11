@@ -199,10 +199,11 @@ const loading = ({ theme, variant, size, isLoading }) => {
 						&:after {
 							content: '';
 							display: block;
-							border: ${calcRem(btnLoaderBorderSize)} solid ${PALETTE.TRANSPARENT};
 							border-radius: 50%;
+							border-left: ${calcRem(btnLoaderBorderSize)} solid ${PALETTE.TRANSPARENT};
 							border-top: ${calcRem(btnLoaderBorderSize)} solid ${btnLoaderColor};
 							border-right: ${calcRem(btnLoaderBorderSize)} solid ${btnLoaderColor};
+							border-bottom: ${calcRem(btnLoaderBorderSize)} solid ${btnLoaderColor};
 							width: ${calcRem(btnLoaderSize)};
 							height: ${calcRem(btnLoaderSize)};
 							-webkit-animation: spin 2s linear infinite;
