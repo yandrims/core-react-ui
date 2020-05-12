@@ -1,10 +1,18 @@
+#### Usage
+
+```markdown
+import Container from 'y-ui/dist/elements/Container';
+```
+
+#### Example
+
 ```js
 import Container from '../../elements/Container';
 
 <Container>Lorem ipsum, dolor sit amet consectetur adipisicing elit</Container>;
 ```
 
-#### Full Width
+#### Example Full Width
 
 ```js
 import Container from '../../elements/Container';
@@ -14,7 +22,7 @@ import Container from '../../elements/Container';
 </Container>;
 ```
 
-#### Responsive
+#### Example Responsive
 
 ```js
 import Container from '../../elements/Container';

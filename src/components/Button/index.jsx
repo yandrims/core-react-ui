@@ -8,15 +8,14 @@ import Styles from './styles';
 
 /** helpers */
 import globalProps from '../../helpers/globalProps';
-
-/** constants */
-import GLOBAL_VARIANTS from '../../constants/globalVariants';
-
 import {
 	withForwardRef,
 	withThemeConsumer,
 	withGlobalProps,
 } from '../../helpers/hoc';
+
+/** constants */
+import GLOBAL_VARIANTS from '../../constants/globalVariants';
 
 function Button({ forwardRef, children, isLoading, isDisabled, ...rest }) {
 	return (
@@ -32,7 +31,6 @@ function Button({ forwardRef, children, isLoading, isDisabled, ...rest }) {
 		</Styles>
 	);
 }
-console.log(Object.values(GLOBAL_VARIANTS.SIZE));
 
 Button.propTypes = {
 	/** Global Props */

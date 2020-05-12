@@ -1,3 +1,11 @@
+#### Usage
+
+```markdown
+import Col from 'y-ui/dist/elements/Col';
+```
+
+#### Example
+
 ```js
 import Col from '../../elements/Col';
 

@@ -2,6 +2,7 @@ This is UI Library for Website / Web Application that build with React JS
 
 > | Elements     | Notes |
 > | ------------ | ----- |
+> | 🔳 Alert     | -     |
 > | 🔳 Badge     | -     |
 > | 🔳 Box       | -     |
 > | 🔳 CheckBox  | -     |
@@ -14,6 +15,7 @@ This is UI Library for Website / Web Application that build with React JS
 > | 🔳 Label     | -     |
 > | 🔳 Line      | -     |
 > | 🔳 Link      | -     |
+> | 🔳 List      | -     |
 > | 🔳 Loader    | -     |
 > | 🔳 Radio     | -     |
 > | ✅ Row       | -     |
@@ -27,7 +29,6 @@ This is UI Library for Website / Web Application that build with React JS
 > | Components        | Notes                             |
 > | ----------------- | --------------------------------- |
 > | 🔳 Accordion      | -                                 |
-> | 🔳 Alert          | -                                 |
 > | ✅ Button         | TODO: replace spinner with Loader |
 > | 🔳 Breadcrumb     | -                                 |
 > | 🔳 Dialog         | -                                 |
@@ -35,7 +36,6 @@ This is UI Library for Website / Web Application that build with React JS
 > | 🔳 EmptyState     | -                                 |
 > | 🔳 FormGroup      | -                                 |
 > | 🔳 InfiniteScroll | -                                 |
-> | 🔳 List           | -                                 |
 > | 🔳 Modal          | -                                 |
 > | 🔳 Pagination     | -                                 |
 > | 🔳 Popover        | -                                 |
@@ -55,3 +55,29 @@ This is UI Library for Website / Web Application that build with React JS
 > | 🔳 Maps           | -     |
 > | 🔳 TextEditor     | -     |
 > | 🔳 ...            | -     |
+
+## Usage
+
+#### All
+
+```markdown
+import {ExampleElement, ExampleComponent, ExampleWidget} from 'y-ui/dist';
+```
+
+#### Elements Only
+
+```markdown
+import {ExampleElement1, ExampleElement2, ExampleElement3} from 'y-ui/dist/elements';
+```
+
+#### Components Only
+
+```markdown
+import {ExampleComponent1, ExampleComponent2, ExampleComponent3} from 'y-ui/dist/components';
+```
+
+#### Widgets Only
+
+```markdown
+import {ExampleWidget1, ExampleWidget2, ExampleWidget3} from 'y-ui/dist/widgets';
+```

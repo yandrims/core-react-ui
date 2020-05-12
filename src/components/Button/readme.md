@@ -1,3 +1,11 @@
+#### Usage
+
+```markdown
+import Button from 'y-ui/dist/components/Button';
+```
+
+#### Example
+
 ```js
 import Button from '../../components/Button';
 import Row from '../../elements/Row';
@@ -19,7 +27,7 @@ import Col from '../../elements/Col';
 </Row>;
 ```
 
-#### Variants
+#### Example Variants
 
 ```js
 import Button from '../../components/Button';
@@ -57,7 +65,7 @@ import Col from '../../elements/Col';
 </Row>;
 ```
 
-#### Sizes
+#### Example Sizes
 
 ```js
 import Button from '../../components/Button';

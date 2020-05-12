@@ -8,7 +8,6 @@ import Styles from './styles';
 
 /** helpers */
 import globalProps from '../../helpers/globalProps';
-
 import {
 	withForwardRef,
 	withThemeConsumer,

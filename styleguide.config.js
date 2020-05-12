@@ -14,7 +14,7 @@ const notesPath = `${srcPath}/notes`;
 const assetsPath = `${srcPath}/assets`;
 
 module.exports = {
-	title: 'Core UI Library',
+	title: 'Y-UI Library',
 	serverPort: (process.env.PORT && parseInt(process.env.PORT)) || 3001,
 	assetsDir: [assetsPath],
 	usageMode: 'expand',
