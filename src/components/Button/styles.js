@@ -100,6 +100,9 @@ const colors = ({ theme, variant, isLoading, isDisabled, isOutlined }) => {
 		background-color: ${isOutlined ? btnTextColor : btnBackgroundColor};
 		color: ${isOutlined ? btnBackgroundColor : btnTextColor};
 		border: ${borderWidth}px solid ${btnBorderColor}
+		&:visited {
+			color: ${isOutlined ? btnBackgroundColor : btnTextColor};
+		}
 		${
 			(!(isLoading || isDisabled) &&
 				`

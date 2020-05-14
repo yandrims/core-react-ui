@@ -40,6 +40,8 @@ See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
 
+/*! https://mths.be/punycode v1.4.1 by @mathias */
+
 /*! https://mths.be/regenerate v1.3.3 by @mathias | MIT license */
 
 /**

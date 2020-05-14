@@ -10,6 +10,7 @@ const baseStyle = {
 	colorDisabledText: '#EEEEEE',
 	colorDark: '#1e3c3c',
 	colorLight: '#caf7f7',
+	colorLink: '#219191',
 };
 
 /** breakpoints */

@@ -1,5 +1,5 @@
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=void 0;/** base style */var baseStyle={fontFamily:"\"Lato\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif",fontSize:15,// in px
-colorText:"#000000",colorPrimary:"#219191",colorPrimaryText:"#ffffff",colorDisabled:"#AAAAAA",colorDisabledText:"#EEEEEE",colorDark:"#1e3c3c",colorLight:"#caf7f7"},breakpoints={xxs:320,// in px
+colorText:"#000000",colorPrimary:"#219191",colorPrimaryText:"#ffffff",colorDisabled:"#AAAAAA",colorDisabledText:"#EEEEEE",colorDark:"#1e3c3c",colorLight:"#caf7f7",colorLink:"#219191"},breakpoints={xxs:320,// in px
 xs:386,// in px
 sm:576,// in px
 md:768,// in px
