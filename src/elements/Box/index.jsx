@@ -1,6 +1,6 @@
 /** npm packages */
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 
 /** style */
@@ -25,8 +25,32 @@ function Box({ forwardRef, children, ...rest }) {
 Box.propTypes = {
 	/** Global Props */
 	...globalProps,
+
+	/** Background */
+	customBackground: PropTypes.string,
+
+	/** Color */
+	customColor: PropTypes.string,
+
+	/** Border */
+	isBordered: PropTypes.bool,
+
+	/** Border Width */
+	borderWidth: PropTypes.number,
+
+	/** Border Style */
+	borderStyle: PropTypes.string,
+
+	/** Border Color */
+	borderColor: PropTypes.string,
+
+	/** Border Radius */
+	borderRadius: PropTypes.number,
 };
 
-Box.defaultProps = {};
+Box.defaultProps = {
+	isBordered: false,
+	borderRadius: 0,
+};
 
 export default compose(withForwardRef, withThemeConsumer, withGlobalProps)(Box);

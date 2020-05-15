@@ -4,7 +4,7 @@ This is UI Library for Website / Web Application that build with React JS
 > | ------------ | ----- |
 > | 🔳 Alert     | -     |
 > | 🔳 Badge     | -     |
-> | 🔳 Box       | -     |
+> | ✅ Box       | -     |
 > | 🔳 CheckBox  | -     |
 > | ✅ Col       | -     |
 > | ✅ Container | -     |

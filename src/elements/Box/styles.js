@@ -4,14 +4,33 @@ import styled from 'styled-components';
 /** helpers */
 import { commonStyles } from '../../helpers/style';
 
-const mainStyle = ({ theme }) => {
+/** constants */
+import COLORS from '../../constants/colors';
+
+const mainStyle = ({
+	theme,
+	customBackground = '',
+	customColor = '',
+	isBordered,
+	borderWidth = 1,
+	borderStyle = 'solid',
+	borderColor = COLORS.PALETTE.GREY,
+	borderRadius = 0,
+}) => {
 	const {
-		baseStyle: { fontSize },
+		container: { padding },
 	} = theme;
 
 	return `
-		font-size: ${fontSize}px;
-		color: green;
+		padding: ${padding}px;
+		${(customBackground && `background: ${customBackground};`) || ''}
+		${(customColor && `color: ${customColor};`) || ''}
+		border-radius: ${borderRadius}px;
+		${
+			(isBordered &&
+				`border: ${borderWidth}px ${borderStyle} ${borderColor};`) ||
+			''
+		}
 	`;
 };
 

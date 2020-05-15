@@ -19,17 +19,17 @@ export function combineGlobalStyles({ theme = {}, ...rest }) {
 
 	/** spacing */
 	const { baseStyle = {}, spacing = {} } = theme;
-	const { fontSize } = baseStyle;
+	const { fontSize: baseFontSize } = baseStyle;
 	const { multiplierFactor: factor = 1 } = spacing;
 
 	const check = (elm) => typeof elm !== 'undefined';
 	const space = (elm, pos, val) =>
-		`${elm}-${pos}: ${rem(val * factor, fontSize)}`;
+		`${elm}-${pos}: ${rem(val * factor, baseFontSize)}`;
 
 	/** margin */
 	const { m, my, mx, mt, mb, ml, mr } = rest;
 	if (check(m)) {
-		styles.push(`margin: ${rem(m * factor, fontSize)}`);
+		styles.push(`margin: ${rem(m * factor, baseFontSize)}`);
 	}
 	if (check(my)) {
 		styles.push(space('margin', 'top', my));
@@ -55,7 +55,7 @@ export function combineGlobalStyles({ theme = {}, ...rest }) {
 	/** padding */
 	const { p, py, px, pt, pb, pl, pr } = rest;
 	if (check(p)) {
-		styles.push(`padding: ${rem(p * factor, fontSize)}`);
+		styles.push(`padding: ${rem(p * factor, baseFontSize)}`);
 	}
 	if (check(py)) {
 		styles.push(space('padding', 'top', py));
@@ -76,6 +76,48 @@ export function combineGlobalStyles({ theme = {}, ...rest }) {
 	}
 	if (check(pr)) {
 		styles.push(space('padding', 'right', pr));
+	}
+
+	/** width */
+	const { w } = rest;
+	if (w) {
+		styles.push(`width: ${w}`);
+	}
+
+	/** max width */
+	const { maxW } = rest;
+	if (maxW) {
+		styles.push(`max-width: ${maxW}`);
+	}
+
+	/** min width */
+	const { minW } = rest;
+	if (minW) {
+		styles.push(`min-width: ${minW}`);
+	}
+
+	/** height */
+	const { h } = rest;
+	if (h) {
+		styles.push(`height: ${h}`);
+	}
+
+	/** max height */
+	const { maxH } = rest;
+	if (maxH) {
+		styles.push(`max-height: ${maxH}`);
+	}
+
+	/** min height */
+	const { minH } = rest;
+	if (minH) {
+		styles.push(`min-height: ${minH}`);
+	}
+
+	/** font size */
+	const { customFontSize } = rest;
+	if (customFontSize) {
+		styles.push(`font-size: ${rem(customFontSize, baseFontSize)}`);
 	}
 
 	/** textAlign */

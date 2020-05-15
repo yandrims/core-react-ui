@@ -6,12 +6,11 @@ import { commonStyles } from '../../helpers/style';
 
 const mainStyle = ({ theme, cursor }) => {
 	const {
-		baseStyle: { fontSize, colorLink },
+		baseStyle: { colorLink },
 	} = theme;
 
 	return `
 		transition: 0.3s;
-		font-size: ${fontSize}px;
 		text-decoration: none;
 		color: ${colorLink};
 		cursor: ${cursor || 'pointer'};

@@ -59,6 +59,27 @@ const globalProps = {
 	/** Padding Right */
 	pr: PropTypes.number,
 
+	/** Width */
+	w: PropTypes.string,
+
+	/** Max Width */
+	maxW: PropTypes.string,
+
+	/** Min Width */
+	minW: PropTypes.string,
+
+	/** Height */
+	h: PropTypes.string,
+
+	/** Max Height */
+	maxH: PropTypes.string,
+
+	/** Min Height */
+	minH: PropTypes.string,
+
+	/** Font Size */
+	customFontSize: PropTypes.number,
+
 	/** Text Align */
 	textAlign: PropTypes.string,
 
