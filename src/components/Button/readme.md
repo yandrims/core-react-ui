@@ -4,6 +4,18 @@
 import Button from 'y-ui/dist/components/Button';
 ```
 
+or
+
+```markdown
+import { Button } from 'y-ui/dist/components';
+```
+
+or
+
+```markdown
+import { Button } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

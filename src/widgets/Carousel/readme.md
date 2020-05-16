@@ -4,6 +4,18 @@
 import Carousel from 'y-ui/dist/widgets/Carousel';
 ```
 
+or
+
+```markdown
+import { Carousel } from 'y-ui/dist/widgets';
+```
+
+or
+
+```markdown
+import { Carousel } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

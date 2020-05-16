@@ -4,6 +4,18 @@
 import TextEditor from 'y-ui/dist/widgets/TextEditor';
 ```
 
+or
+
+```markdown
+import { TextEditor } from 'y-ui/dist/widgets';
+```
+
+or
+
+```markdown
+import { TextEditor } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

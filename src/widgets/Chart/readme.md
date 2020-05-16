@@ -4,6 +4,18 @@
 import Chart from 'y-ui/dist/widgets/Chart';
 ```
 
+or
+
+```markdown
+import { Chart } from 'y-ui/dist/widgets';
+```
+
+or
+
+```markdown
+import { Chart } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

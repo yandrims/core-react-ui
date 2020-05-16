@@ -27,6 +27,7 @@ Global props are props that are available on every elements.
 > | maxH           | String | max-height         | "100%"                                    |
 > | minH           | String | min-height         | "100%"                                    |
 > | customFontSize | Number | font size          | 10                                        |
+> | lineHeight     | String | line height        | "20px"                                    |
 > | textAlign      | String | text align         | "center"                                  |
 > | verticalAlign  | String | vertical align     | "middle"                                  |
 > | position       | String | position           | "relative"                                |

@@ -1,5 +1,6 @@
 /* eslint-disable no-prototype-builtins */
 /* eslint-disable no-restricted-syntax */
+
 /** helpers */
 import { rem } from './utils';
 
@@ -118,6 +119,12 @@ export function combineGlobalStyles({ theme = {}, ...rest }) {
 	const { customFontSize } = rest;
 	if (customFontSize) {
 		styles.push(`font-size: ${rem(customFontSize, baseFontSize)}`);
+	}
+
+	/** line height */
+	const { lineHeight } = rest;
+	if (lineHeight) {
+		styles.push(`line-height: ${lineHeight}`);
 	}
 
 	/** textAlign */

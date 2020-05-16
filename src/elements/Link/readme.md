@@ -4,6 +4,18 @@
 import Link from 'y-ui/dist/elements/Link';
 ```
 
+or
+
+```markdown
+import { Link } from 'y-ui/dist/elements';
+```
+
+or
+
+```markdown
+import { Link } from 'y-ui/dist';
+```
+
 #### Example Anchor
 
 ```js

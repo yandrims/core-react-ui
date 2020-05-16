@@ -4,6 +4,18 @@
 import Icon from 'y-ui/dist/elements/Icon';
 ```
 
+or
+
+```markdown
+import { Icon } from 'y-ui/dist/elements';
+```
+
+or
+
+```markdown
+import { Icon } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

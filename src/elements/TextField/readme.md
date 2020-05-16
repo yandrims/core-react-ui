@@ -4,6 +4,18 @@
 import TextField from 'y-ui/dist/elements/TextField';
 ```
 
+or
+
+```markdown
+import { TextField } from 'y-ui/dist/elements';
+```
+
+or
+
+```markdown
+import { TextField } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

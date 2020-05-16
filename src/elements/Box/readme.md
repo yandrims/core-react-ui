@@ -4,6 +4,18 @@
 import Box from 'y-ui/dist/elements/Box';
 ```
 
+or
+
+```markdown
+import { Box } from 'y-ui/dist/elements';
+```
+
+or
+
+```markdown
+import { Box } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js
@@ -23,6 +35,7 @@ import Box from '../../elements/Box';
 	borderStyle="dotted"
 	borderColor="turquoise"
 	borderRadius={20}
+	p={6}
 >
 	Lorem ipsum, dolor sit amet consectetur adipisicing elit
 </Box>;
@@ -33,7 +46,7 @@ import Box from '../../elements/Box';
 ```js
 import Box from '../../elements/Box';
 
-<Box customBackground="turquoise" customColor="white" borderRadius={20}>
+<Box bgColor="turquoise" textColor="white" borderRadius={20} p={4}>
 	Lorem ipsum, dolor sit amet consectetur adipisicing elit
 </Box>;
 ```

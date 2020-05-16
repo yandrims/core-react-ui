@@ -4,6 +4,18 @@
 import Radio from 'y-ui/dist/elements/Radio';
 ```
 
+or
+
+```markdown
+import { Radio } from 'y-ui/dist/elements';
+```
+
+or
+
+```markdown
+import { Radio } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

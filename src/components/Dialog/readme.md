@@ -4,6 +4,18 @@
 import Dialog from 'y-ui/dist/components/Dialog';
 ```
 
+or
+
+```markdown
+import { Dialog } from 'y-ui/dist/components';
+```
+
+or
+
+```markdown
+import { Dialog } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

@@ -4,6 +4,18 @@
 import Table from 'y-ui/dist/components/Table';
 ```
 
+or
+
+```markdown
+import { Table } from 'y-ui/dist/components';
+```
+
+or
+
+```markdown
+import { Table } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

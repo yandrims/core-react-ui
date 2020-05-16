@@ -4,6 +4,18 @@
 import Maps from 'y-ui/dist/widgets/Maps';
 ```
 
+or
+
+```markdown
+import { Maps } from 'y-ui/dist/widgets';
+```
+
+or
+
+```markdown
+import { Maps } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

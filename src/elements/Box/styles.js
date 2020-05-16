@@ -8,23 +8,17 @@ import { commonStyles } from '../../helpers/style';
 import COLORS from '../../constants/colors';
 
 const mainStyle = ({
-	theme,
-	customBackground = '',
-	customColor = '',
+	bgColor = '',
+	textColor = '',
 	isBordered,
 	borderWidth = 1,
 	borderStyle = 'solid',
 	borderColor = COLORS.PALETTE.GREY,
 	borderRadius = 0,
 }) => {
-	const {
-		container: { padding },
-	} = theme;
-
 	return `
-		padding: ${padding}px;
-		${(customBackground && `background: ${customBackground};`) || ''}
-		${(customColor && `color: ${customColor};`) || ''}
+		${(bgColor && `background: ${bgColor};`) || ''}
+		${(textColor && `color: ${textColor};`) || ''}
 		border-radius: ${borderRadius}px;
 		${
 			(isBordered &&

@@ -26,11 +26,11 @@ Box.propTypes = {
 	/** Global Props */
 	...globalProps,
 
-	/** Background */
-	customBackground: PropTypes.string,
+	/** Background Color */
+	bgColor: PropTypes.string,
 
-	/** Color */
-	customColor: PropTypes.string,
+	/** Text Color */
+	textColor: PropTypes.string,
 
 	/** Border */
 	isBordered: PropTypes.bool,

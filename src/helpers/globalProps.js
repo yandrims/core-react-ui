@@ -80,6 +80,9 @@ const globalProps = {
 	/** Font Size */
 	customFontSize: PropTypes.number,
 
+	/** Line Height */
+	lineHeight: PropTypes.string,
+
 	/** Text Align */
 	textAlign: PropTypes.string,
 

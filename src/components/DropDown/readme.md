@@ -4,6 +4,18 @@
 import DropDown from 'y-ui/dist/components/DropDown';
 ```
 
+or
+
+```markdown
+import { DropDown } from 'y-ui/dist/components';
+```
+
+or
+
+```markdown
+import { DropDown } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

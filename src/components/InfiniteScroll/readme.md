@@ -4,6 +4,18 @@
 import InfiniteScroll from 'y-ui/dist/components/InfiniteScroll';
 ```
 
+or
+
+```markdown
+import { InfiniteScroll } from 'y-ui/dist/components';
+```
+
+or
+
+```markdown
+import { InfiniteScroll } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

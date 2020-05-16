@@ -4,6 +4,18 @@
 import EmptyState from 'y-ui/dist/components/EmptyState';
 ```
 
+or
+
+```markdown
+import { EmptyState } from 'y-ui/dist/components';
+```
+
+or
+
+```markdown
+import { EmptyState } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

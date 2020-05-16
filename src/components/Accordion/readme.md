@@ -4,6 +4,18 @@
 import Accordion from 'y-ui/dist/components/Accordion';
 ```
 
+or
+
+```markdown
+import { Accordion } from 'y-ui/dist/components';
+```
+
+or
+
+```markdown
+import { Accordion } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

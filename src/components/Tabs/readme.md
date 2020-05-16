@@ -4,6 +4,18 @@
 import Tabs from 'y-ui/dist/components/Tabs';
 ```
 
+or
+
+```markdown
+import { Tabs } from 'y-ui/dist/components';
+```
+
+or
+
+```markdown
+import { Tabs } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

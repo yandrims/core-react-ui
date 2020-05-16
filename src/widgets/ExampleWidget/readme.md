@@ -4,6 +4,18 @@
 import ExampleWidget from 'y-ui/dist/widgets/ExampleWidget';
 ```
 
+or
+
+```markdown
+import { ExampleWidget } from 'y-ui/dist/widgets';
+```
+
+or
+
+```markdown
+import { ExampleWidget } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

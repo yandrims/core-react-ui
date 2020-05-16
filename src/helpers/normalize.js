@@ -5,30 +5,53 @@ import { createGlobalStyle } from 'styled-components';
 import COLORS from '../constants/colors';
 import THEME from '../themes';
 
+/** helpers */
+import { deepMerge, rem } from './utils';
+
 const { BLACK, GREY } = COLORS.PALETTE;
 const { PRIMARY, PRIMARY_TEXT } = COLORS.COLOR;
 
 const mainFontSize = ({ theme = {} }) => {
-	const { baseStyle = {} } = theme;
+	const mergedTheme = theme ? deepMerge(THEME, theme) : THEME;
 	const {
-		fontSize = THEME && THEME.baseStyle && THEME.baseStyle.fontSize,
-	} = baseStyle;
+		baseStyle: { fontSize },
+	} = mergedTheme;
 
 	return `${fontSize || 15}px`;
 };
 
 const mainFontColor = ({ theme = {} }) => {
-	const { baseStyle = {} } = theme;
+	const mergedTheme = theme ? deepMerge(THEME, theme) : THEME;
 	const {
-		fontColor = THEME && THEME.baseStyle && THEME.baseStyle.colorText,
-	} = baseStyle;
+		baseStyle: { colorText = BLACK },
+	} = mergedTheme;
 
-	return `${fontColor || BLACK}`;
+	return colorText;
+};
+
+const headingFontSize = ({ theme = {} }) => {
+	const mergedTheme = theme ? deepMerge(THEME, theme) : THEME;
+	const {
+		baseStyle: { fontSize },
+		spacing: { multiplierFactor: factor = 1 },
+		headingFontSize: { h1, h2, h3, h4, h5, h6 },
+	} = mergedTheme;
+
+	return `
+		h1 { font-size: ${rem(h1 * factor, fontSize)}; }
+		h2 { font-size: ${rem(h2 * factor, fontSize)}; }
+		h3 { font-size: ${rem(h3 * factor, fontSize)}; }
+		h4 { font-size: ${rem(h4 * factor, fontSize)}; }
+		h5 { font-size: ${rem(h5 * factor, fontSize)}; }
+		h6 { font-size: ${rem(h6 * factor, fontSize)}; }
+	`;
 };
 
 const customScrollBar = ({ isCustomScrollBar, theme = {} }) => {
-	const { baseStyle = {} } = theme;
-	const { colorPrimary = PRIMARY } = baseStyle;
+	const mergedTheme = theme ? deepMerge(THEME, theme) : THEME;
+	const {
+		baseStyle: { colorPrimary = PRIMARY },
+	} = mergedTheme;
 
 	return `
 		${
@@ -46,8 +69,10 @@ const customScrollBar = ({ isCustomScrollBar, theme = {} }) => {
 };
 
 const customSelection = ({ isCustomSelection = true, theme = {} }) => {
-	const { baseStyle = {} } = theme;
-	const { colorPrimary = PRIMARY, colorPrimaryText = PRIMARY_TEXT } = baseStyle;
+	const mergedTheme = theme ? deepMerge(THEME, theme) : THEME;
+	const {
+		baseStyle: { colorPrimary = PRIMARY, colorPrimaryText = PRIMARY_TEXT },
+	} = mergedTheme;
 
 	return `
 		${
@@ -82,7 +107,7 @@ const Styles = createGlobalStyle`
 	body { 
     min-width: 300px;
     min-height: 100%;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: auto;
     letter-spacing: normal;
     font-style: normal;
 		font-weight: normal;
@@ -189,6 +214,11 @@ const Styles = createGlobalStyle`
 		display: none;
 	}
 
+	h1, h2, h3, h4, h5, h6, p {
+		margin: 0;
+	}
+
+	${headingFontSize}
 	${customScrollBar}
 	${customSelection}
 	${({ globalStyles }) => globalStyles || ''}

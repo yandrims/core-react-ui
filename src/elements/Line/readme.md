@@ -4,6 +4,18 @@
 import Line from 'y-ui/dist/elements/Line';
 ```
 
+or
+
+```markdown
+import { Line } from 'y-ui/dist/elements';
+```
+
+or
+
+```markdown
+import { Line } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

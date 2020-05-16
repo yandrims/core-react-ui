@@ -4,6 +4,18 @@
 import Row from 'y-ui/dist/elements/Row';
 ```
 
+or
+
+```markdown
+import { Row } from 'y-ui/dist/elements';
+```
+
+or
+
+```markdown
+import { Row } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

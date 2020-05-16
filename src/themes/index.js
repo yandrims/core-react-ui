@@ -35,6 +35,16 @@ const spacing = {
 	multiplierFactor: 3,
 };
 
+/** heading font size */
+const headingFontSize = {
+	h1: 10,
+	h2: 9,
+	h3: 8,
+	h4: 7,
+	h5: 6,
+	h6: 5,
+};
+
 /** form config */
 const formConfig = {
 	borderWidth: 1, // in px
@@ -77,5 +87,6 @@ export default {
 	breakpoints,
 	container,
 	spacing,
+	headingFontSize,
 	formConfig,
 };

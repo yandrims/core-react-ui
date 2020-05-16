@@ -4,6 +4,18 @@
 import FormGroup from 'y-ui/dist/components/FormGroup';
 ```
 
+or
+
+```markdown
+import { FormGroup } from 'y-ui/dist/components';
+```
+
+or
+
+```markdown
+import { FormGroup } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

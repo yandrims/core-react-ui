@@ -4,6 +4,18 @@
 import Alert from 'y-ui/dist/elements/Alert';
 ```
 
+or
+
+```markdown
+import { Alert } from 'y-ui/dist/elements';
+```
+
+or
+
+```markdown
+import { Alert } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

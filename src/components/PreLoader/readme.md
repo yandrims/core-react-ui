@@ -4,6 +4,18 @@
 import PreLoader from 'y-ui/dist/components/PreLoader';
 ```
 
+or
+
+```markdown
+import { PreLoader } from 'y-ui/dist/components';
+```
+
+or
+
+```markdown
+import { PreLoader } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

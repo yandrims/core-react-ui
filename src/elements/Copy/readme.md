@@ -4,6 +4,18 @@
 import Copy from 'y-ui/dist/elements/Copy';
 ```
 
+or
+
+```markdown
+import { Copy } from 'y-ui/dist/elements';
+```
+
+or
+
+```markdown
+import { Copy } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

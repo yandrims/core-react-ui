@@ -4,6 +4,18 @@
 import ExampleComponent from 'y-ui/dist/components/ExampleComponent';
 ```
 
+or
+
+```markdown
+import { ExampleComponent } from 'y-ui/dist/components';
+```
+
+or
+
+```markdown
+import { ExampleComponent } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

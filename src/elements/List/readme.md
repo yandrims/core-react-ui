@@ -4,6 +4,18 @@
 import List from 'y-ui/dist/elements/List';
 ```
 
+or
+
+```markdown
+import { List } from 'y-ui/dist/elements';
+```
+
+or
+
+```markdown
+import { List } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js

@@ -13,6 +13,21 @@ const srcPath = 'src';
 const notesPath = `${srcPath}/notes`;
 const assetsPath = `${srcPath}/assets`;
 
+/** Components types */
+const componentsTypes = ['elements', 'components', 'widgets'];
+const componentsSections = [];
+
+if (componentsTypes && componentsTypes.length) {
+	componentsTypes.forEach((elm) => {
+		componentsSections.push({
+			name: `${elm && `${elm[0].toUpperCase()}${elm.slice(1)}`}`,
+			content: `${srcPath}/${elm}/readme.md`,
+			components: `${srcPath}/${elm}/**/*.jsx`,
+			sectionDepth: 1,
+		});
+	});
+}
+
 module.exports = {
 	title: 'Y-UI Library',
 	serverPort: (process.env.PORT && parseInt(process.env.PORT)) || 3001,
@@ -107,21 +122,7 @@ module.exports = {
 				},
 			],
 		},
-		{
-			name: 'Elements',
-			components: `${srcPath}/elements/**/*.jsx`,
-			sectionDepth: 2,
-		},
-		{
-			name: 'Components',
-			components: `${srcPath}/components/**/*.jsx`,
-			sectionDepth: 2,
-		},
-		{
-			name: 'Widgets',
-			components: `${srcPath}/widgets/**/*.jsx`,
-			sectionDepth: 2,
-		},
+		...componentsSections,
 	],
 	pagePerSection: true,
 };

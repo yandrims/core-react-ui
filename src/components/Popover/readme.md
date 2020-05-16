@@ -4,6 +4,18 @@
 import Popover from 'y-ui/dist/components/Popover';
 ```
 
+or
+
+```markdown
+import { Popover } from 'y-ui/dist/components';
+```
+
+or
+
+```markdown
+import { Popover } from 'y-ui/dist';
+```
+
 #### Example
 
 ```js
