@@ -29,12 +29,12 @@ const mainFontColor = ({ theme = {} }) => {
 	return colorText;
 };
 
-const headingFontSize = ({ theme = {} }) => {
+const headingFontSizes = ({ theme = {} }) => {
 	const mergedTheme = theme ? deepMerge(THEME, theme) : THEME;
 	const {
 		baseStyle: { fontSize },
 		spacing: { multiplierFactor: factor = 1 },
-		headingFontSize: { h1, h2, h3, h4, h5, h6 },
+		headingFontSizes: { h1, h2, h3, h4, h5, h6 },
 	} = mergedTheme;
 
 	return `
@@ -218,7 +218,7 @@ const Styles = createGlobalStyle`
 		margin: 0;
 	}
 
-	${headingFontSize}
+	${headingFontSizes}
 	${customScrollBar}
 	${customSelection}
 	${({ globalStyles }) => globalStyles || ''}

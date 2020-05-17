@@ -36,13 +36,25 @@ const spacing = {
 };
 
 /** heading font size */
-const headingFontSize = {
+const headingFontSizes = {
 	h1: 10,
 	h2: 9,
 	h3: 8,
 	h4: 7,
 	h5: 6,
 	h6: 5,
+};
+
+/** text font size */
+const textFontSizes = {
+	default: 5,
+	xxs: 2,
+	xs: 3,
+	sm: 4,
+	md: 5,
+	lg: 6,
+	xl: 7,
+	xxl: 8,
 };
 
 /** form config */
@@ -87,6 +99,7 @@ export default {
 	breakpoints,
 	container,
 	spacing,
-	headingFontSize,
+	headingFontSizes,
+	textFontSizes,
 	formConfig,
 };

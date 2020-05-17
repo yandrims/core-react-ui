@@ -1,6 +1,6 @@
 /** npm packages */
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 
 /** style */
@@ -15,19 +15,23 @@ import {
 } from '../../helpers/hoc';
 
 function Loader({ forwardRef, children, ...rest }) {
-	return (
-		<Styles ref={forwardRef} {...rest}>
-			{children}
-		</Styles>
-	);
+	return <Styles ref={forwardRef} {...rest} />;
 }
 
 Loader.propTypes = {
 	/** Global Props */
 	...globalProps,
+
+	/** Size */
+	size: PropTypes.number,
+
+	/** Color */
+	color: PropTypes.string,
 };
 
-Loader.defaultProps = {};
+Loader.defaultProps = {
+	size: 10,
+};
 
 export default compose(
 	withForwardRef,

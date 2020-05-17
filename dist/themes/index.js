@@ -8,5 +8,5 @@ xl:1200,// in px
 xxl:1500// in px
 },container={padding:baseStyle.fontSize||15,// in px
 maxWidth:1366// in px
-},spacing={multiplierFactor:3},headingFontSize={h1:10,h2:9,h3:8,h4:7,h5:6,h6:5},formConfig={borderWidth:1,// in px
-borderRadius:2,fontWeight:400,fontSize:{default:5,xxs:2,xs:3,sm:4,md:5,lg:6,xl:7,xxl:8},px:{default:5,xxs:2,xs:3,sm:4,md:5,lg:6,xl:7,xxl:8},py:{default:2.5,xxs:1,xs:1.5,sm:2,md:2.5,lg:3,xl:3.5,xxl:4}},_default={baseStyle:baseStyle,breakpoints:breakpoints,container:container,spacing:spacing,headingFontSize:headingFontSize,formConfig:formConfig};/** breakpoints */exports["default"]=_default;
+},spacing={multiplierFactor:3},headingFontSizes={h1:10,h2:9,h3:8,h4:7,h5:6,h6:5},textFontSizes={default:5,xxs:2,xs:3,sm:4,md:5,lg:6,xl:7,xxl:8},formConfig={borderWidth:1,// in px
+borderRadius:2,fontWeight:400,fontSize:{default:5,xxs:2,xs:3,sm:4,md:5,lg:6,xl:7,xxl:8},px:{default:5,xxs:2,xs:3,sm:4,md:5,lg:6,xl:7,xxl:8},py:{default:2.5,xxs:1,xs:1.5,sm:2,md:2.5,lg:3,xl:3.5,xxl:4}},_default={baseStyle:baseStyle,breakpoints:breakpoints,container:container,spacing:spacing,headingFontSizes:headingFontSizes,textFontSizes:textFontSizes,formConfig:formConfig};/** breakpoints */exports["default"]=_default;

@@ -17,6 +17,9 @@ import {
 /** constants */
 import GLOBAL_VARIANTS from '../../constants/globalVariants';
 
+/** elements */
+import Loader from '../../elements/Loader';
+
 function Button({ forwardRef, children, isLoading, isDisabled, ...rest }) {
 	return (
 		<Styles
@@ -26,7 +29,12 @@ function Button({ forwardRef, children, isLoading, isDisabled, ...rest }) {
 			isDisabled={isDisabled}
 			{...rest}
 		>
-			{(isLoading && <span className="btn-loading" />) || null}
+			{(isLoading && (
+				<span>
+					<Loader className="loader" />
+				</span>
+			)) ||
+				null}
 			{children}
 		</Styles>
 	);

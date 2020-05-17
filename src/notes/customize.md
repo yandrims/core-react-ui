@@ -33,6 +33,24 @@ Default theme:
   spacing: {
     multiplierFactor: 3,
   },
+  headingFontSizes: {
+    h1: 10,
+    h2: 9,
+    h3: 8,
+    h4: 7,
+    h5: 6,
+    h6: 5,
+  },
+  textFontSizes: {
+    default: 5,
+    xxs: 2,
+    xs: 3,
+    sm: 4,
+    md: 5,
+    lg: 6,
+    xl: 7,
+    xxl: 8,
+  },
   formConfig: {
     borderWidth: 1, // in px
     borderRadius: 2,

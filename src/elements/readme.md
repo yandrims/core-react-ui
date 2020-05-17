@@ -17,14 +17,14 @@ import { ExampleElement1, ExampleElement2, ExampleElement3 } from 'y-ui/dist/ele
 > | 🔳 [Icon](#/Elements/Icon)           | -           |
 > | 🔳 [Image](#/Elements/Image)         | -           |
 > | 🔳 [Label](#/Elements/Label)         | -           |
-> | 🔳 [Line](#/Elements/Line)           | -           |
+> | 🔳 [Line](#/Elements/Line)           | in progress |
 > | ✅ [Link](#/Elements/Link)           | -           |
 > | 🔳 [List](#/Elements/List)           | -           |
-> | 🔳 [Loader](#/Elements/Loader)       | in progress |
+> | ✅ [Loader](#/Elements/Loader)       | -           |
 > | 🔳 [Radio](#/Elements/Radio)         | -           |
 > | ✅ [Row](#/Elements/Row)             | -           |
 > | 🔳 [SelectBox](#/Elements/SelectBox) | -           |
-> | 🔳 [Text](#/Elements/Text)           | -           |
+> | ✅ [Text](#/Elements/Text)           | -           |
 > | 🔳 [TextArea](#/Elements/TextArea)   | -           |
 > | 🔳 [TextField](#/Elements/TextField) | -           |
 > | 🔳 [Tooltip](#/Elements/Tooltip)     | -           |

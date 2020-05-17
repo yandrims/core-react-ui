@@ -153,7 +153,7 @@ const loading = ({ theme, variant, size, isLoading }) => {
 
 	let btnLoaderColor = colorPrimaryText;
 	const btnLoaderSize = (fontSize[size] || fontSize.default) * 2.5;
-	const btnLoaderBorderSize = (fontSize[size] || fontSize.default) * 0.3;
+	const btnLoaderBorderSize = (fontSize[size] || fontSize.default) * 0.4;
 
 	if (variant) {
 		switch (variant) {
@@ -193,35 +193,20 @@ const loading = ({ theme, variant, size, isLoading }) => {
 				`
 					position: relative;
 					color: ${PALETTE.TRANSPARENT};
-					> .btn-loading {
+					> span {
 						display: block;
 						position: absolute;
 						left: 50%;
 						top: 50%;
 						transform: translate(-50%, -50%);
-						&:after {
-							content: '';
-							display: block;
-							border-radius: 50%;
+						> .loader {
+							width: ${calcRem(btnLoaderSize)};
+							height: ${calcRem(btnLoaderSize)};
 							border-left: ${calcRem(btnLoaderBorderSize)} solid ${PALETTE.TRANSPARENT};
 							border-top: ${calcRem(btnLoaderBorderSize)} solid ${btnLoaderColor};
 							border-right: ${calcRem(btnLoaderBorderSize)} solid ${btnLoaderColor};
 							border-bottom: ${calcRem(btnLoaderBorderSize)} solid ${btnLoaderColor};
-							width: ${calcRem(btnLoaderSize)};
-							height: ${calcRem(btnLoaderSize)};
-							-webkit-animation: spin 2s linear infinite;
-							animation: spin 2s linear infinite;
 						}
-					}
-					
-					@-webkit-keyframes spin {
-						0% { -webkit-transform: rotate(0deg); }
-						100% { -webkit-transform: rotate(360deg); }
-					}
-					
-					@keyframes spin {
-						0% { transform: rotate(0deg); }
-						100% { transform: rotate(360deg); }
 					}
 		`) ||
 			''

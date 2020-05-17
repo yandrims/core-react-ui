@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 /* eslint-disable no-restricted-syntax */
 
 /** theme */
@@ -33,4 +34,17 @@ export function rem(
 	fontSize = (THEME && THEME.baseStyle && THEME.baseStyle.fontSize) || 15,
 ) {
 	return (value && `${(value / fontSize).toFixed(3)}rem`) || 0;
+}
+
+/** get object value */
+export function getObjectValues(obj) {
+	const res = [];
+	if (obj) {
+		for (const i in obj) {
+			if (obj.hasOwnProperty(i)) {
+				res.push(obj[i]);
+			}
+		}
+	}
+	return res;
 }
