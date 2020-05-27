@@ -29,7 +29,7 @@ if (componentsTypes && componentsTypes.length) {
 }
 
 module.exports = {
-	title: 'Y-UI Library',
+	title: `${process.env.npm_package_description || 'UI Library'}`,
 	serverPort: (process.env.PORT && parseInt(process.env.PORT)) || 3001,
 	assetsDir: [assetsPath],
 	usageMode: 'expand',

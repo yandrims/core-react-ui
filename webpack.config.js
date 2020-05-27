@@ -14,4 +14,9 @@ module.exports = {
 			},
 		],
 	},
+	devServer: {
+		compress: true,
+		inline: true,
+		allowedHosts: ['.yandrims.com'],
+	},
 };
