@@ -119,13 +119,23 @@ const Styles = createGlobalStyle`
 		background-color: transparent;
     text-decoration: none;
     &:hover {
-        text-decoration: none;
+			text-decoration: none;
     }
+		&:active {
+			color: initial;
+		}
 	}
 
 	img {
 		max-width: 100%;
 		border-style: none;
+		height: auto;
+
+		&[alt] {
+			color: $color-transparent;
+			text-indent: -9999px;
+			font-size: 0;
+		}
 	}
 
 	main {
@@ -214,8 +224,17 @@ const Styles = createGlobalStyle`
 		display: none;
 	}
 
+	table {
+		border-collapse: collapse;
+	}
+
 	h1, h2, h3, h4, h5, h6, p {
 		margin: 0;
+	}
+
+	ul, ol {
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 
 	${headingFontSizes}
