@@ -4,23 +4,23 @@
 import { ExampleComponent1, ExampleComponent2, ExampleComponent3 } from 'y-ui/dist/components';
 ```
 
-> | Components                                       | Notes |
-> | ------------------------------------------------ | ----- |
-> | 🔳 [Accordion](#/Components/Accordion)           | -     |
-> | ✅ [Button](#/Components/Button)                 | -     |
-> | 🔳 [Breadcrumb](#/Components/Breadcrumb)         | -     |
-> | 🔳 [Dialog](#/Components/Dialog)                 | -     |
-> | 🔳 [DropDown](#/Components/DropDown)             | -     |
-> | 🔳 [EmptyState](#/Components/EmptyState)         | -     |
-> | 🔳 [FormGroup](#/Components/FormGroup)           | -     |
-> | 🔳 [InfiniteScroll](#/Components/InfiniteScroll) | -     |
-> | 🔳 [Modal](#/Components/Modal)                   | -     |
-> | 🔳 [Pagination](#/Components/Pagination)         | -     |
-> | 🔳 [Popover](#/Components/Popover)               | -     |
-> | 🔳 [PreLoader](#/Components/PreLoader)           | -     |
-> | 🔳 [SearchBox](#/Components/SearchBox)           | -     |
-> | 🔳 [Tabs](#/Components/Tabs)                     | -     |
-> | 🔳 [Table](#/Components/Table)                   | -     |
-> | 🔳 [TimeLine](#/Components/TimeLine)             | -     |
-> | 🔳 [Toast](#/Components/Toast)                   | -     |
-> | 🔳 ...                                           | -     |
+> | Components                                              | Notes |
+> | ------------------------------------------------------- | ----- |
+> | 🔳 &nbsp; [Accordion](#/Components/Accordion)           | -     |
+> | ✅ &nbsp; [Button](#/Components/Button)                 | -     |
+> | 🔳 &nbsp; [Breadcrumb](#/Components/Breadcrumb)         | -     |
+> | 🔳 &nbsp; [Dialog](#/Components/Dialog)                 | -     |
+> | 🔳 &nbsp; [DropDown](#/Components/DropDown)             | -     |
+> | 🔳 &nbsp; [EmptyState](#/Components/EmptyState)         | -     |
+> | 🔳 &nbsp; [FormGroup](#/Components/FormGroup)           | -     |
+> | 🔳 &nbsp; [InfiniteScroll](#/Components/InfiniteScroll) | -     |
+> | 🔳 &nbsp; [Modal](#/Components/Modal)                   | -     |
+> | 🔳 &nbsp; [Pagination](#/Components/Pagination)         | -     |
+> | 🔳 &nbsp; [Popover](#/Components/Popover)               | -     |
+> | 🔳 &nbsp; [PreLoader](#/Components/PreLoader)           | -     |
+> | 🔳 &nbsp; [SearchBox](#/Components/SearchBox)           | -     |
+> | 🔳 &nbsp; [Tabs](#/Components/Tabs)                     | -     |
+> | 🔳 &nbsp; [Table](#/Components/Table)                   | -     |
+> | 🔳 &nbsp; [TimeLine](#/Components/TimeLine)             | -     |
+> | 🔳 &nbsp; [Toast](#/Components/Toast)                   | -     |
+> | 🔳 &nbsp; ...                                           | -     |

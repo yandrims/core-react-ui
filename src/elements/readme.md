@@ -4,28 +4,28 @@
 import { ExampleElement1, ExampleElement2, ExampleElement3 } from 'y-ui/dist/elements';
 ```
 
-> | Elements                             | Notes       |
-> | ------------------------------------ | ----------- |
-> | 🔳 [Alert](#/Elements/Alert)         | -           |
-> | 🔳 [Badge](#/Elements/Badge)         | -           |
-> | ✅ [Box](#/Elements/Box)             | -           |
-> | 🔳 [CheckBox](#/Elements/CheckBox)   | -           |
-> | ✅ [Col](#/Elements/Col)             | -           |
-> | ✅ [Container](#/Elements/Container) | -           |
-> | 🔳 [Copy](#/Elements/Copy)           | -           |
-> | 🔳 [FileInput](#/Elements/FileInput) | -           |
-> | 🔳 [Icon](#/Elements/Icon)           | -           |
-> | 🔳 [Image](#/Elements/Image)         | -           |
-> | 🔳 [Label](#/Elements/Label)         | -           |
-> | 🔳 [Line](#/Elements/Line)           | in progress |
-> | ✅ [Link](#/Elements/Link)           | -           |
-> | 🔳 [List](#/Elements/List)           | -           |
-> | ✅ [Loader](#/Elements/Loader)       | -           |
-> | 🔳 [Radio](#/Elements/Radio)         | -           |
-> | ✅ [Row](#/Elements/Row)             | -           |
-> | 🔳 [SelectBox](#/Elements/SelectBox) | -           |
-> | ✅ [Text](#/Elements/Text)           | -           |
-> | 🔳 [TextArea](#/Elements/TextArea)   | -           |
-> | 🔳 [TextField](#/Elements/TextField) | -           |
-> | 🔳 [Tooltip](#/Elements/Tooltip)     | -           |
-> | 🔳 ...                               | -           |
+> | Elements                                    | Notes       |
+> | ------------------------------------------- | ----------- |
+> | 🔳 &nbsp; [Alert](#/Elements/Alert)         | -           |
+> | 🔳 &nbsp; [Badge](#/Elements/Badge)         | -           |
+> | ✅ &nbsp; [Box](#/Elements/Box)             | -           |
+> | 🔳 &nbsp; [CheckBox](#/Elements/CheckBox)   | -           |
+> | ✅ &nbsp; [Col](#/Elements/Col)             | -           |
+> | ✅ &nbsp; [Container](#/Elements/Container) | -           |
+> | 🔳 &nbsp; [Copy](#/Elements/Copy)           | -           |
+> | 🔳 &nbsp; [FileInput](#/Elements/FileInput) | -           |
+> | 🔳 &nbsp; [Icon](#/Elements/Icon)           | -           |
+> | 🔳 &nbsp; [Image](#/Elements/Image)         | -           |
+> | 🔳 &nbsp; [Label](#/Elements/Label)         | -           |
+> | 🔳 &nbsp; [Line](#/Elements/Line)           | in progress |
+> | ✅ &nbsp; [Link](#/Elements/Link)           | -           |
+> | 🔳 &nbsp; [List](#/Elements/List)           | -           |
+> | ✅ &nbsp; [Loader](#/Elements/Loader)       | -           |
+> | 🔳 &nbsp; [Radio](#/Elements/Radio)         | -           |
+> | ✅ &nbsp; [Row](#/Elements/Row)             | -           |
+> | 🔳 &nbsp; [SelectBox](#/Elements/SelectBox) | -           |
+> | ✅ &nbsp; [Text](#/Elements/Text)           | -           |
+> | 🔳 &nbsp; [TextArea](#/Elements/TextArea)   | -           |
+> | 🔳 &nbsp; [TextField](#/Elements/TextField) | -           |
+> | 🔳 &nbsp; [Tooltip](#/Elements/Tooltip)     | -           |
+> | 🔳 &nbsp; ...                               | -           |

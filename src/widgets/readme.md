@@ -4,11 +4,11 @@
 import { ExampleWidget1, ExampleWidget2, ExampleWidget3 } from 'y-ui/dist/widgets';
 ```
 
-> | Widgets                                       | Notes |
-> | --------------------------------------------- | ----- |
-> | 🔳 [Carousel](#/Widgets/Carousel)             | -     |
-> | 🔳 [Chart](#/Widgets/Chart)                   | -     |
-> | 🔳 [DateTimePicker](#/Widgets/DateTimePicker) | -     |
-> | 🔳 [Maps](#/Widgets/Maps)                     | -     |
-> | 🔳 [TextEditor](#/Widgets/TextEditor)         | -     |
-> | 🔳 ...                                        | -     |
+> | Widgets                                              | Notes |
+> | ---------------------------------------------------- | ----- |
+> | 🔳 &nbsp; [Carousel](#/Widgets/Carousel)             | -     |
+> | 🔳 &nbsp; [Chart](#/Widgets/Chart)                   | -     |
+> | 🔳 &nbsp; [DateTimePicker](#/Widgets/DateTimePicker) | -     |
+> | 🔳 &nbsp; [Maps](#/Widgets/Maps)                     | -     |
+> | 🔳 &nbsp; [TextEditor](#/Widgets/TextEditor)         | -     |
+> | 🔳 &nbsp; ...                                        | -     |
