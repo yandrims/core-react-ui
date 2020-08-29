@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Radio from 'y-ui/dist/elements/Radio';
+import Radio from 'y-ui-react/dist/elements/Radio';
 ```
 
 or
 
 ```markdown
-import { Radio } from 'y-ui/dist/elements';
+import { Radio } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { Radio } from 'y-ui/dist';
+import { Radio } from 'y-ui-react/dist';
 ```
 
 #### Example

@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import ExampleComponent from 'y-ui/dist/components/ExampleComponent';
+import ExampleComponent from 'y-ui-react/dist/components/ExampleComponent';
 ```
 
 or
 
 ```markdown
-import { ExampleComponent } from 'y-ui/dist/components';
+import { ExampleComponent } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { ExampleComponent } from 'y-ui/dist';
+import { ExampleComponent } from 'y-ui-react/dist';
 ```
 
 #### Example

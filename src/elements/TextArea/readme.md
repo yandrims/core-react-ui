@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import TextArea from 'y-ui/dist/elements/TextArea';
+import TextArea from 'y-ui-react/dist/elements/TextArea';
 ```
 
 or
 
 ```markdown
-import { TextArea } from 'y-ui/dist/elements';
+import { TextArea } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { TextArea } from 'y-ui/dist';
+import { TextArea } from 'y-ui-react/dist';
 ```
 
 #### Example

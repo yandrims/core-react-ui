@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import EmptyState from 'y-ui/dist/components/EmptyState';
+import EmptyState from 'y-ui-react/dist/components/EmptyState';
 ```
 
 or
 
 ```markdown
-import { EmptyState } from 'y-ui/dist/components';
+import { EmptyState } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { EmptyState } from 'y-ui/dist';
+import { EmptyState } from 'y-ui-react/dist';
 ```
 
 #### Example

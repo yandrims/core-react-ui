@@ -1,6 +1,6 @@
 {
 	"name": "y-ui",
-	"description": "React Y-UI Library",
+	"description": "Y-UI React Library",
 	"keywords": [
 		"web",
 		"react",
@@ -31,7 +31,7 @@
 		"docs": "rimraf docs && styleguidist build"
 	},
 	"engines": {
-		"node": "^12.16.1"
+		"node": "^10.16.1"
 	},
 	"dependencies": {
 		"react": "^16.13.1",

@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Tabs from 'y-ui/dist/components/Tabs';
+import Tabs from 'y-ui-react/dist/components/Tabs';
 ```
 
 or
 
 ```markdown
-import { Tabs } from 'y-ui/dist/components';
+import { Tabs } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { Tabs } from 'y-ui/dist';
+import { Tabs } from 'y-ui-react/dist';
 ```
 
 #### Example

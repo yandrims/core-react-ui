@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import PreLoader from 'y-ui/dist/components/PreLoader';
+import PreLoader from 'y-ui-react/dist/components/PreLoader';
 ```
 
 or
 
 ```markdown
-import { PreLoader } from 'y-ui/dist/components';
+import { PreLoader } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { PreLoader } from 'y-ui/dist';
+import { PreLoader } from 'y-ui-react/dist';
 ```
 
 #### Example

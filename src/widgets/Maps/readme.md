@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Maps from 'y-ui/dist/widgets/Maps';
+import Maps from 'y-ui-react/dist/widgets/Maps';
 ```
 
 or
 
 ```markdown
-import { Maps } from 'y-ui/dist/widgets';
+import { Maps } from 'y-ui-react/dist/widgets';
 ```
 
 or
 
 ```markdown
-import { Maps } from 'y-ui/dist';
+import { Maps } from 'y-ui-react/dist';
 ```
 
 #### Example

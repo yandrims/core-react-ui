@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Breadcrumb from 'y-ui/dist/components/Breadcrumb';
+import Breadcrumb from 'y-ui-react/dist/components/Breadcrumb';
 ```
 
 or
 
 ```markdown
-import { Breadcrumb } from 'y-ui/dist/components';
+import { Breadcrumb } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { Breadcrumb } from 'y-ui/dist';
+import { Breadcrumb } from 'y-ui-react/dist';
 ```
 
 #### Example

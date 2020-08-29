@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import ExampleWidget from 'y-ui/dist/widgets/ExampleWidget';
+import ExampleWidget from 'y-ui-react/dist/widgets/ExampleWidget';
 ```
 
 or
 
 ```markdown
-import { ExampleWidget } from 'y-ui/dist/widgets';
+import { ExampleWidget } from 'y-ui-react/dist/widgets';
 ```
 
 or
 
 ```markdown
-import { ExampleWidget } from 'y-ui/dist';
+import { ExampleWidget } from 'y-ui-react/dist';
 ```
 
 #### Example

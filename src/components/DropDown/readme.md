@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import DropDown from 'y-ui/dist/components/DropDown';
+import DropDown from 'y-ui-react/dist/components/DropDown';
 ```
 
 or
 
 ```markdown
-import { DropDown } from 'y-ui/dist/components';
+import { DropDown } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { DropDown } from 'y-ui/dist';
+import { DropDown } from 'y-ui-react/dist';
 ```
 
 #### Example

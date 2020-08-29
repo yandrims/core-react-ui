@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Row from 'y-ui/dist/elements/Row';
+import Row from 'y-ui-react/dist/elements/Row';
 ```
 
 or
 
 ```markdown
-import { Row } from 'y-ui/dist/elements';
+import { Row } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { Row } from 'y-ui/dist';
+import { Row } from 'y-ui-react/dist';
 ```
 
 #### Example

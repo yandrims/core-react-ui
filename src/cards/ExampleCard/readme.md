@@ -1,7 +1,7 @@
 #### Usage
 
 ```markdown
-import ExampleCard from 'y-ui/dist/cards/ExampleCard';
+import ExampleCard from 'y-ui-react/dist/cards/ExampleCard';
 ```
 
 #### Example

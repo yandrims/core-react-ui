@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import TextEditor from 'y-ui/dist/widgets/TextEditor';
+import TextEditor from 'y-ui-react/dist/widgets/TextEditor';
 ```
 
 or
 
 ```markdown
-import { TextEditor } from 'y-ui/dist/widgets';
+import { TextEditor } from 'y-ui-react/dist/widgets';
 ```
 
 or
 
 ```markdown
-import { TextEditor } from 'y-ui/dist';
+import { TextEditor } from 'y-ui-react/dist';
 ```
 
 #### Example

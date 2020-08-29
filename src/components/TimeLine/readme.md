@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import TimeLine from 'y-ui/dist/components/TimeLine';
+import TimeLine from 'y-ui-react/dist/components/TimeLine';
 ```
 
 or
 
 ```markdown
-import { TimeLine } from 'y-ui/dist/components';
+import { TimeLine } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { TimeLine } from 'y-ui/dist';
+import { TimeLine } from 'y-ui-react/dist';
 ```
 
 #### Example

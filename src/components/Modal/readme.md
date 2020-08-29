@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Modal from 'y-ui/dist/components/Modal';
+import Modal from 'y-ui-react/dist/components/Modal';
 ```
 
 or
 
 ```markdown
-import { Modal } from 'y-ui/dist/components';
+import { Modal } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { Modal } from 'y-ui/dist';
+import { Modal } from 'y-ui-react/dist';
 ```
 
 #### Example

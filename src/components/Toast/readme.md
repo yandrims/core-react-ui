@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Toast from 'y-ui/dist/components/Toast';
+import Toast from 'y-ui-react/dist/components/Toast';
 ```
 
 or
 
 ```markdown
-import { Toast } from 'y-ui/dist/components';
+import { Toast } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { Toast } from 'y-ui/dist';
+import { Toast } from 'y-ui-react/dist';
 ```
 
 #### Example

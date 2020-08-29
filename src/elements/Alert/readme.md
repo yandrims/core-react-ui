@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Alert from 'y-ui/dist/elements/Alert';
+import Alert from 'y-ui-react/dist/elements/Alert';
 ```
 
 or
 
 ```markdown
-import { Alert } from 'y-ui/dist/elements';
+import { Alert } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { Alert } from 'y-ui/dist';
+import { Alert } from 'y-ui-react/dist';
 ```
 
 #### Example

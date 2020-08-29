@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Accordion from 'y-ui/dist/components/Accordion';
+import Accordion from 'y-ui-react/dist/components/Accordion';
 ```
 
 or
 
 ```markdown
-import { Accordion } from 'y-ui/dist/components';
+import { Accordion } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { Accordion } from 'y-ui/dist';
+import { Accordion } from 'y-ui-react/dist';
 ```
 
 #### Example

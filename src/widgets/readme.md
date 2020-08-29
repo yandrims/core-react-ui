@@ -1,7 +1,7 @@
 #### Usage
 
 ```markdown
-import { ExampleWidget1, ExampleWidget2, ExampleWidget3 } from 'y-ui/dist/widgets';
+import { ExampleWidget1, ExampleWidget2, ExampleWidget3 } from 'y-ui-react/dist/widgets';
 ```
 
 > | Widgets                                              | Notes |

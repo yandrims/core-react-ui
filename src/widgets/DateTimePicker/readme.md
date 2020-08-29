@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import DateTimePicker from 'y-ui/dist/widgets/DateTimePicker';
+import DateTimePicker from 'y-ui-react/dist/widgets/DateTimePicker';
 ```
 
 or
 
 ```markdown
-import { DateTimePicker } from 'y-ui/dist/widgets';
+import { DateTimePicker } from 'y-ui-react/dist/widgets';
 ```
 
 or
 
 ```markdown
-import { DateTimePicker } from 'y-ui/dist';
+import { DateTimePicker } from 'y-ui-react/dist';
 ```
 
 #### Example

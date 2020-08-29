@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Link from 'y-ui/dist/elements/Link';
+import Link from 'y-ui-react/dist/elements/Link';
 ```
 
 or
 
 ```markdown
-import { Link } from 'y-ui/dist/elements';
+import { Link } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { Link } from 'y-ui/dist';
+import { Link } from 'y-ui-react/dist';
 ```
 
 #### Example Anchor

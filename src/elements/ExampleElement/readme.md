@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import ExampleElement from 'y-ui/dist/elements/ExampleElement';
+import ExampleElement from 'y-ui-react/dist/elements/ExampleElement';
 ```
 
 or
 
 ```markdown
-import { ExampleElement } from 'y-ui/dist/elements';
+import { ExampleElement } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { ExampleElement } from 'y-ui/dist';
+import { ExampleElement } from 'y-ui-react/dist';
 ```
 
 #### Example

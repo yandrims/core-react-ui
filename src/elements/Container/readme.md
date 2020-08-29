@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Container from 'y-ui/dist/elements/Container';
+import Container from 'y-ui-react/dist/elements/Container';
 ```
 
 or
 
 ```markdown
-import { Container } from 'y-ui/dist/elements';
+import { Container } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { Container } from 'y-ui/dist';
+import { Container } from 'y-ui-react/dist';
 ```
 
 #### Example

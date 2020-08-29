@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import FormGroup from 'y-ui/dist/components/FormGroup';
+import FormGroup from 'y-ui-react/dist/components/FormGroup';
 ```
 
 or
 
 ```markdown
-import { FormGroup } from 'y-ui/dist/components';
+import { FormGroup } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { FormGroup } from 'y-ui/dist';
+import { FormGroup } from 'y-ui-react/dist';
 ```
 
 #### Example

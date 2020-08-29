@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import InfiniteScroll from 'y-ui/dist/components/InfiniteScroll';
+import InfiniteScroll from 'y-ui-react/dist/components/InfiniteScroll';
 ```
 
 or
 
 ```markdown
-import { InfiniteScroll } from 'y-ui/dist/components';
+import { InfiniteScroll } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { InfiniteScroll } from 'y-ui/dist';
+import { InfiniteScroll } from 'y-ui-react/dist';
 ```
 
 #### Example

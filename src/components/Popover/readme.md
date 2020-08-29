@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Popover from 'y-ui/dist/components/Popover';
+import Popover from 'y-ui-react/dist/components/Popover';
 ```
 
 or
 
 ```markdown
-import { Popover } from 'y-ui/dist/components';
+import { Popover } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { Popover } from 'y-ui/dist';
+import { Popover } from 'y-ui-react/dist';
 ```
 
 #### Example

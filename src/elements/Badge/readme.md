@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Badge from 'y-ui/dist/elements/Badge';
+import Badge from 'y-ui-react/dist/elements/Badge';
 ```
 
 or
 
 ```markdown
-import { Badge } from 'y-ui/dist/elements';
+import { Badge } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { Badge } from 'y-ui/dist';
+import { Badge } from 'y-ui-react/dist';
 ```
 
 #### Example

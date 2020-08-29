@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import CheckBox from 'y-ui/dist/elements/CheckBox';
+import CheckBox from 'y-ui-react/dist/elements/CheckBox';
 ```
 
 or
 
 ```markdown
-import { CheckBox } from 'y-ui/dist/elements';
+import { CheckBox } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { CheckBox } from 'y-ui/dist';
+import { CheckBox } from 'y-ui-react/dist';
 ```
 
 #### Example

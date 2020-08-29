@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Tooltip from 'y-ui/dist/elements/Tooltip';
+import Tooltip from 'y-ui-react/dist/elements/Tooltip';
 ```
 
 or
 
 ```markdown
-import { Tooltip } from 'y-ui/dist/elements';
+import { Tooltip } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { Tooltip } from 'y-ui/dist';
+import { Tooltip } from 'y-ui-react/dist';
 ```
 
 #### Example

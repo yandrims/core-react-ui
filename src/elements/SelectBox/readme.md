@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import SelectBox from 'y-ui/dist/elements/SelectBox';
+import SelectBox from 'y-ui-react/dist/elements/SelectBox';
 ```
 
 or
 
 ```markdown
-import { SelectBox } from 'y-ui/dist/elements';
+import { SelectBox } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { SelectBox } from 'y-ui/dist';
+import { SelectBox } from 'y-ui-react/dist';
 ```
 
 #### Example

@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Label from 'y-ui/dist/elements/Label';
+import Label from 'y-ui-react/dist/elements/Label';
 ```
 
 or
 
 ```markdown
-import { Label } from 'y-ui/dist/elements';
+import { Label } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { Label } from 'y-ui/dist';
+import { Label } from 'y-ui-react/dist';
 ```
 
 #### Example

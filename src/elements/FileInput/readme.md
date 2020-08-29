@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import FileInput from 'y-ui/dist/elements/FileInput';
+import FileInput from 'y-ui-react/dist/elements/FileInput';
 ```
 
 or
 
 ```markdown
-import { FileInput } from 'y-ui/dist/elements';
+import { FileInput } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { FileInput } from 'y-ui/dist';
+import { FileInput } from 'y-ui-react/dist';
 ```
 
 #### Example

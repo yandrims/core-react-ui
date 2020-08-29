@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Copy from 'y-ui/dist/elements/Copy';
+import Copy from 'y-ui-react/dist/elements/Copy';
 ```
 
 or
 
 ```markdown
-import { Copy } from 'y-ui/dist/elements';
+import { Copy } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { Copy } from 'y-ui/dist';
+import { Copy } from 'y-ui-react/dist';
 ```
 
 #### Example

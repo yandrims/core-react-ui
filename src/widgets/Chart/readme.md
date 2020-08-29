@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Chart from 'y-ui/dist/widgets/Chart';
+import Chart from 'y-ui-react/dist/widgets/Chart';
 ```
 
 or
 
 ```markdown
-import { Chart } from 'y-ui/dist/widgets';
+import { Chart } from 'y-ui-react/dist/widgets';
 ```
 
 or
 
 ```markdown
-import { Chart } from 'y-ui/dist';
+import { Chart } from 'y-ui-react/dist';
 ```
 
 #### Example

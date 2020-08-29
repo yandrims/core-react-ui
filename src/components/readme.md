@@ -1,7 +1,7 @@
 #### Usage
 
 ```markdown
-import { ExampleComponent1, ExampleComponent2, ExampleComponent3 } from 'y-ui/dist/components';
+import { ExampleComponent1, ExampleComponent2, ExampleComponent3 } from 'y-ui-react/dist/components';
 ```
 
 > | Components                                              | Notes |

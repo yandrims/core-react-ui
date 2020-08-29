@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Dialog from 'y-ui/dist/components/Dialog';
+import Dialog from 'y-ui-react/dist/components/Dialog';
 ```
 
 or
 
 ```markdown
-import { Dialog } from 'y-ui/dist/components';
+import { Dialog } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { Dialog } from 'y-ui/dist';
+import { Dialog } from 'y-ui-react/dist';
 ```
 
 #### Example

@@ -8,7 +8,6 @@ const COLOR_PRIMARY = '#219191';
 const COLOR_DARK = '#1e3c3c';
 const COLOR_LIGHT = '#caf7f7';
 
-// const path = require('path');
 const srcPath = 'src';
 const notesPath = `${srcPath}/notes`;
 const assetsPath = `${srcPath}/assets`;

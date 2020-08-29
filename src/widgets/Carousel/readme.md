@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Carousel from 'y-ui/dist/widgets/Carousel';
+import Carousel from 'y-ui-react/dist/widgets/Carousel';
 ```
 
 or
 
 ```markdown
-import { Carousel } from 'y-ui/dist/widgets';
+import { Carousel } from 'y-ui-react/dist/widgets';
 ```
 
 or
 
 ```markdown
-import { Carousel } from 'y-ui/dist';
+import { Carousel } from 'y-ui-react/dist';
 ```
 
 #### Example

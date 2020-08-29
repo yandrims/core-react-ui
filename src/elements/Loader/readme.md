@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Loader from 'y-ui/dist/elements/Loader';
+import Loader from 'y-ui-react/dist/elements/Loader';
 ```
 
 or
 
 ```markdown
-import { Loader } from 'y-ui/dist/elements';
+import { Loader } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { Loader } from 'y-ui/dist';
+import { Loader } from 'y-ui-react/dist';
 ```
 
 #### Example

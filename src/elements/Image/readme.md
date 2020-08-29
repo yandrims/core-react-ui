@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import Image from 'y-ui/dist/elements/Image';
+import Image from 'y-ui-react/dist/elements/Image';
 ```
 
 or
 
 ```markdown
-import { Image } from 'y-ui/dist/elements';
+import { Image } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { Image } from 'y-ui/dist';
+import { Image } from 'y-ui-react/dist';
 ```
 
 #### Example

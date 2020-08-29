@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import TextField from 'y-ui/dist/elements/TextField';
+import TextField from 'y-ui-react/dist/elements/TextField';
 ```
 
 or
 
 ```markdown
-import { TextField } from 'y-ui/dist/elements';
+import { TextField } from 'y-ui-react/dist/elements';
 ```
 
 or
 
 ```markdown
-import { TextField } from 'y-ui/dist';
+import { TextField } from 'y-ui-react/dist';
 ```
 
 #### Example

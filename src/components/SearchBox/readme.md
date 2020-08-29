@@ -1,19 +1,19 @@
 #### Usage
 
 ```markdown
-import SearchBox from 'y-ui/dist/components/SearchBox';
+import SearchBox from 'y-ui-react/dist/components/SearchBox';
 ```
 
 or
 
 ```markdown
-import { SearchBox } from 'y-ui/dist/components';
+import { SearchBox } from 'y-ui-react/dist/components';
 ```
 
 or
 
 ```markdown
-import { SearchBox } from 'y-ui/dist';
+import { SearchBox } from 'y-ui-react/dist';
 ```
 
 #### Example
