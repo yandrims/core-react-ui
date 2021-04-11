@@ -30,9 +30,6 @@
 		"build-only:rollup": "rollup -c",
 		"docs": "rimraf docs && styleguidist build"
 	},
-	"engines": {
-		"node": "^10.16.1"
-	},
 	"dependencies": {
 		"react": "^16.13.1",
 		"react-docgen": "^5.3.0",
