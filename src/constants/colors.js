@@ -2,12 +2,8 @@
 import THEME from '../themes';
 
 const { baseStyle } = THEME;
-const {
-	colorPrimary,
-	colorPrimaryText,
-	colorDisabled,
-	colorDisabledText,
-} = baseStyle;
+const { colorPrimary, colorPrimaryText, colorDisabled, colorDisabledText } =
+	baseStyle;
 
 /** palette */
 const PALETTE = {
@@ -42,17 +38,8 @@ const PALETTE = {
 	YELLOW: '#ffeb00',
 };
 
-const {
-	BLACK,
-	BLUE,
-	GREEN,
-	GREY,
-	GREY_LIGHT,
-	RED,
-	TURQUOISE,
-	YELLOW,
-	WHITE,
-} = PALETTE;
+const { BLACK, BLUE, GREEN, GREY, GREY_LIGHT, RED, TURQUOISE, YELLOW, WHITE } =
+	PALETTE;
 
 const COLOR = {
 	PRIMARY: colorPrimary || TURQUOISE,

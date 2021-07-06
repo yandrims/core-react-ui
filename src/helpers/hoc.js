@@ -28,20 +28,17 @@ const withThemeConsumer = (Component) => (props) => {
 	);
 };
 
-const withGlobalProps = (Component) => ({
-	ariaLabel,
-	ariaLabelledBy,
-	dataCustom,
-	...rest
-}) => {
-	return (
-		<Component
-			{...rest}
-			aria-label={ariaLabel}
-			aria-labelledby={ariaLabelledBy}
-			data-custom={dataCustom}
-		/>
-	);
-};
+const withGlobalProps =
+	(Component) =>
+	({ ariaLabel, ariaLabelledBy, dataCustom, ...rest }) => {
+		return (
+			<Component
+				{...rest}
+				aria-label={ariaLabel}
+				aria-labelledby={ariaLabelledBy}
+				data-custom={dataCustom}
+			/>
+		);
+	};
 
 export { withForwardRef, withThemeConsumer, withGlobalProps };

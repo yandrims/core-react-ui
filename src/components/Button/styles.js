@@ -11,16 +11,8 @@ import COLORS from '../../constants/colors';
 
 const { STATUS, PALETTE } = COLORS;
 const { COLOR_THEMES } = GLOBAL_VARIANTS;
-const {
-	SUCCESS,
-	INFO,
-	WARNING,
-	DANGER,
-	DISABLED,
-	TRANSPARENT,
-	LIGHT,
-	DARK,
-} = COLOR_THEMES;
+const { SUCCESS, INFO, WARNING, DANGER, DISABLED, TRANSPARENT, LIGHT, DARK } =
+	COLOR_THEMES;
 
 const colors = ({ theme, variant, isLoading, isDisabled, isOutlined }) => {
 	const {
