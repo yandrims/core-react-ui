@@ -49,93 +49,37 @@ export function getObjectValues(obj) {
 	return res;
 }
 
-/* 
-import merge from 'deepmerge';
+/** check is bottom page */
+export function isBottomPage(params = {}) {
+	const { bottomOffset = 50 } = params;
+	const {
+		body: { scrollHeight = 0, offsetHeight = 0 },
+		documentElement: html,
+	} = document;
 
-const isInArray = (value, array) => {
-  return array.indexOf(value) > -1;
-};
+	const getHeight = (elm) =>
+		Math.max(elm.clientHeight, elm.scrollHeight, elm.offsetHeight);
 
-const deepMerge = (originalObj, overriderObj) =>
-  merge(originalObj, overriderObj);
+	const height = Math.max(scrollHeight, offsetHeight, getHeight(html));
+	const vh = window.innerHeight;
+	const isBottom = !!(Math.ceil(vh + window.scrollY) >= height - bottomOffset);
 
-const rem = value => {
-  return `${value / 16}rem`;
-};
+	return isBottom;
+}
 
-const getRandomString = () => {
-  return Math.random()
-    .toString(36)
-    .substring(7);
-};
-
-const isElementInViewport = el => {
-  var rect = el.getBoundingClientRect();
-
-  return (
-    rect.bottom > 0 &&
-    rect.right > 0 &&
-    rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
-    rect.top < (window.innerHeight || document.documentElement.clientHeight)
-  );
-};
-
-const getIntrinsicRatio = (width, height) => {
-  return (height / width) * 100;
-};
-
-const range = (from, to, step = 1) => {
-  let i = from;
-  const range = [];
-
-  while (i <= to) {
-    range.push(i);
-    i += step;
-  }
-
-  return range;
-};
-
-const hexToRgba = (hex, alpha) => {
-  let c;
-  if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
-    c = hex.substring(1).split('');
-    if (c.length == 3) {
-      c = [c[0], c[0], c[1], c[1], c[2], c[2]];
-    }
-    c = '0x' + c.join('');
-    return (
-      'rgba(' +
-      [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(',') +
-      ',' +
-      alpha +
-      ')'
-    );
-  }
-  throw new Error('Bad Hex');
-};
-
-const getObjectValues = obj => {
-  const res = [];
-  for (let i in obj) {
-    if (obj.hasOwnProperty(i)) {
-      res.push(obj[i]);
-    }
-  }
-  return res;
-};
-
-export {
-  isInArray,
-  deepMerge,
-  rem,
-  getRandomString,
-  isElementInViewport,
-  getIntrinsicRatio,
-  range,
-  hexToRgba,
-  getObjectValues
-};
-
-
- */
+/** convert hex to rgba */
+export function hexToRgba(hex, alpha) {
+	let c;
+	if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+		c = hex.substring(1).split('');
+		if (c.length === 3) {
+			c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+		}
+		c = `0x${c.join('')}`;
+		// eslint-disable-next-line no-bitwise
+		return `rgba(${[(c >> 16) & 255, (c >> 8) & 255, c & 255].join(
+			',',
+		)},${alpha})`;
+	}
+	throw new Error('Bad Hex');
+}

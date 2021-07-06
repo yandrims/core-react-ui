@@ -4,15 +4,8 @@ import styled from 'styled-components';
 /** helpers */
 import { commonStyles } from '../../helpers/style';
 
-const mainStyle = ({ theme }) => {
-	const {
-		baseStyle: { fontSize },
-	} = theme;
-
-	return `
-		font-size: ${fontSize}px;
-		color: green;
-	`;
+const mainStyle = () => {
+	return ``;
 };
 
 const Styles = styled.div`

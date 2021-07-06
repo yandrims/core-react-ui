@@ -1,6 +1,6 @@
 /** npm packages */
-import React from 'react';
-// import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 
 /** style */
@@ -13,11 +13,43 @@ import {
 	withThemeConsumer,
 	withGlobalProps,
 } from '../../helpers/hoc';
+import { isBottomPage } from '../../helpers/utils';
 
-function InfiniteScroll({ forwardRef, children, ...rest }) {
+/** elements */
+import Box from '../../elements/Box';
+import Loader from '../../elements/Loader';
+
+function InfiniteScroll({
+	forwardRef,
+	children,
+	onBottomPage,
+	status,
+	bottomOffset,
+	...rest
+}) {
+	const isLoading = status === 'loading';
+
+	useEffect(() => {
+		const onScrollHandler = () => {
+			if (!isLoading && isBottomPage({ bottomOffset })) {
+				if (onBottomPage && typeof onBottomPage === 'function') {
+					onBottomPage();
+				}
+			}
+		};
+		document.addEventListener('scroll', onScrollHandler);
+		return () => document.removeEventListener('scroll', onScrollHandler);
+	}, []);
+
 	return (
 		<Styles ref={forwardRef} {...rest}>
 			{children}
+			{(isLoading && (
+				<Box textAlign="center" py={3}>
+					<Loader className="loader" />
+				</Box>
+			)) ||
+				null}
 		</Styles>
 	);
 }
@@ -25,9 +57,20 @@ function InfiniteScroll({ forwardRef, children, ...rest }) {
 InfiniteScroll.propTypes = {
 	/** Global Props */
 	...globalProps,
+
+	/** Data fetch status */
+	status: PropTypes.oneOf(['init', 'loading', 'success', 'error']),
+
+	/** Trigger function */
+	onBottomPage: PropTypes.func,
+
+	/** bottom offset */
+	bottomOffset: PropTypes.number,
 };
 
-InfiniteScroll.defaultProps = {};
+InfiniteScroll.defaultProps = {
+	bottomOffset: 50,
+};
 
 export default compose(
 	withForwardRef,

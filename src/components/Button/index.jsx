@@ -59,10 +59,10 @@ Button.propTypes = {
 	/** Button loading indicator */
 	isLoading: PropTypes.bool,
 
-	/** Disabled indicator. */
+	/** Disabled indicator */
 	isDisabled: PropTypes.bool,
 
-	/** Reverse the color of given color variant. */
+	/** Reverse the color of given color variant */
 	isOutlined: PropTypes.bool,
 
 	/** onClick action */
@@ -74,7 +74,7 @@ Button.propTypes = {
 	/** onMouseLeave action */
 	onMouseLeave: PropTypes.func,
 
-	/** Specify the type of the button. */
+	/** Specify the type of the button */
 	type: PropTypes.oneOf(['button', 'submit', 'reset']),
 };
 

@@ -21,7 +21,7 @@ const mainStyle = ({ theme, color, size }) => {
 	const loaderBorderSize = size * 0.4;
 
 	return `
-		display: block;
+		display: inline-block;
 		border-radius: 50%;
 		border-left: ${calcRem(loaderBorderSize)} solid ${PALETTE.TRANSPARENT};
 		border-top: ${calcRem(loaderBorderSize)} solid ${loaderColor};
